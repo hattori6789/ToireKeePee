@@ -13,6 +13,15 @@
 		0268B4F51B790CE00075252D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0268B4F41B790CE00075252D /* Images.xcassets */; };
 		0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0268B4F61B790CE00075252D /* LaunchScreen.xib */; };
 		0268B5041B790CE00075252D /* toireKeePeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B5031B790CE00075252D /* toireKeePeeTests.swift */; };
+		0268B5181B790DF10075252D /* batsu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0268B5111B790DF10075252D /* batsu.png */; };
+		0268B51B1B790DF10075252D /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 0268B5141B790DF10075252D /* maru.png */; };
+		0279A24C1B79E88200CF916A /* SEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279A24B1B79E88200CF916A /* SEManager.swift */; };
+		0279A24F1B79ED2700CF916A /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0279A24E1B79ED2700CF916A /* BGM.mp3 */; };
+		0279A2561B79F02400CF916A /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0279A2541B79F02400CF916A /* batsu.mp3 */; };
+		0279A2571B79F02400CF916A /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0279A2551B79F02400CF916A /* maru.mp3 */; };
+		028BC1021B79C19E003E6E2F /* ossan.png in Resources */ = {isa = PBXBuildFile; fileRef = 028BC1011B79C19E003E6E2F /* ossan.png */; };
+		028BC1081B79C5E2003E6E2F /* kyozin.png in Resources */ = {isa = PBXBuildFile; fileRef = 028BC1071B79C5E2003E6E2F /* kyozin.png */; };
+		02AF8C341B7997B900A0B0F7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF8C311B7997B900A0B0F7 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		0268B4FD1B790CE00075252D /* toireKeePeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toireKeePeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0268B5021B790CE00075252D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0268B5031B790CE00075252D /* toireKeePeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toireKeePeeTests.swift; sourceTree = "<group>"; };
+		0268B5111B790DF10075252D /* batsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batsu.png; sourceTree = "<group>"; };
+		0268B5141B790DF10075252D /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
+		0279A24B1B79E88200CF916A /* SEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEManager.swift; sourceTree = "<group>"; };
+		0279A24E1B79ED2700CF916A /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
+		0279A2541B79F02400CF916A /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
+		0279A2551B79F02400CF916A /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
+		028BC1011B79C19E003E6E2F /* ossan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ossan.png; sourceTree = "<group>"; };
+		028BC1071B79C5E2003E6E2F /* kyozin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyozin.png; sourceTree = "<group>"; };
+		02AF8C311B7997B900A0B0F7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +95,10 @@
 		0268B4EA1B790CE00075252D /* toireKeePee */ = {
 			isa = PBXGroup;
 			children = (
+				0279A24D1B79ED1B00CF916A /* Sound */,
+				0268B50F1B790DE30075252D /* Image */,
 				0268B4ED1B790CE00075252D /* AppDelegate.swift */,
+				0279A24B1B79E88200CF916A /* SEManager.swift */,
 				0268B4EF1B790CE00075252D /* ViewController.swift */,
 				0268B4F11B790CE00075252D /* Main.storyboard */,
 				0268B4F41B790CE00075252D /* Images.xcassets */,
@@ -110,6 +131,28 @@
 				0268B5021B790CE00075252D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0268B50F1B790DE30075252D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				02AF8C311B7997B900A0B0F7 /* background.png */,
+				028BC1011B79C19E003E6E2F /* ossan.png */,
+				028BC1071B79C5E2003E6E2F /* kyozin.png */,
+				0268B5141B790DF10075252D /* maru.png */,
+				0268B5111B790DF10075252D /* batsu.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		0279A24D1B79ED1B00CF916A /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				0279A24E1B79ED2700CF916A /* BGM.mp3 */,
+				0279A2541B79F02400CF916A /* batsu.mp3 */,
+				0279A2551B79F02400CF916A /* maru.mp3 */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +235,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0279A2561B79F02400CF916A /* batsu.mp3 in Resources */,
+				028BC1081B79C5E2003E6E2F /* kyozin.png in Resources */,
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
+				0268B51B1B790DF10075252D /* maru.png in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
+				02AF8C341B7997B900A0B0F7 /* background.png in Resources */,
+				0279A24F1B79ED2700CF916A /* BGM.mp3 in Resources */,
+				0279A2571B79F02400CF916A /* maru.mp3 in Resources */,
+				028BC1021B79C19E003E6E2F /* ossan.png in Resources */,
+				0268B5181B790DF10075252D /* batsu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0279A24C1B79E88200CF916A /* SEManager.swift in Sources */,
 				0268B4F01B790CE00075252D /* ViewController.swift in Sources */,
 				0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +461,7 @@
 				0268B5091B790CE00075252D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0268B50A1B790CE00075252D /* Build configuration list for PBXNativeTarget "toireKeePeeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +470,7 @@
 				0268B50C1B790CE00075252D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
