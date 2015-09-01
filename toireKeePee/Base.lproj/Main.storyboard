@@ -30,22 +30,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="oyazi.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-9g-edD">
-                                <rect key="frame" x="276" y="310" width="128" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="2MG-KC-XAs"/>
-                                    <constraint firstAttribute="width" constant="128" id="a3s-5i-lTZ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="gal.png" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-lU-q04">
-                                <rect key="frame" x="236" y="344" width="128" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="01H-tC-EKB"/>
-                                    <constraint firstAttribute="width" constant="128" id="LtF-Q3-ihI"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-fI-LMQ">
-                                <rect key="frame" x="240" y="280" width="120" height="40"/>
+                                <rect key="frame" x="240" y="400" width="120" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3vb-7L-coJ"/>
@@ -63,18 +49,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="rBU-9g-edD" secondAttribute="centerX" constant="-40" id="A48-bB-pp5"/>
                             <constraint firstAttribute="trailing" secondItem="aTH-Cc-deO" secondAttribute="trailing" id="Be0-cF-9xv"/>
                             <constraint firstAttribute="centerX" secondItem="juc-Yj-TXM" secondAttribute="centerX" id="FS3-tv-tJJ"/>
-                            <constraint firstAttribute="centerX" secondItem="lA0-lU-q04" secondAttribute="centerX" id="PEp-Lu-WvI"/>
-                            <constraint firstItem="6P8-pQ-FJF" firstAttribute="top" secondItem="rBU-9g-edD" secondAttribute="bottom" constant="40" id="aRo-JU-iRX"/>
-                            <constraint firstAttribute="bottom" secondItem="lA0-lU-q04" secondAttribute="bottom" constant="6" id="bDV-v3-pIr"/>
+                            <constraint firstAttribute="centerY" secondItem="tHs-fI-LMQ" secondAttribute="centerY" constant="-120" id="Vf4-RO-cRP"/>
                             <constraint firstItem="6P8-pQ-FJF" firstAttribute="top" secondItem="aTH-Cc-deO" secondAttribute="bottom" id="cF2-uN-2qK"/>
                             <constraint firstAttribute="centerX" secondItem="tHs-fI-LMQ" secondAttribute="centerX" id="f9r-kR-d78"/>
                             <constraint firstItem="aTH-Cc-deO" firstAttribute="leading" secondItem="RKa-HV-DaP" secondAttribute="leading" id="kQL-BI-R16"/>
                             <constraint firstItem="aTH-Cc-deO" firstAttribute="top" secondItem="OhC-6l-fgP" secondAttribute="bottom" id="qgF-v9-Ps8"/>
                             <constraint firstItem="juc-Yj-TXM" firstAttribute="top" secondItem="OhC-6l-fgP" secondAttribute="bottom" constant="60" id="vKx-kI-HjS"/>
-                            <constraint firstAttribute="centerY" secondItem="tHs-fI-LMQ" secondAttribute="centerY" id="x7v-xv-e7E"/>
                         </constraints>
                     </view>
                     <connections>
@@ -259,7 +241,5 @@
     </scenes>
     <resources>
         <image name="background.png" width="640" height="1136"/>
-        <image name="gal.png" width="895" height="1742"/>
-        <image name="oyazi.png" width="790" height="1377"/>
     </resources>
 </document>
