@@ -11,6 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var menButton: UIButton!
+    @IBOutlet weak var womenButton: UIButton!
     @IBOutlet weak var judgeContainerView: UIView!
     @IBOutlet weak var judgeImageView: UIImageView!
     @IBOutlet weak var imageValueLabel: UILabel!
@@ -26,31 +28,25 @@ class ViewController: UIViewController {
     // scoreのデフォルト値
     var score: Int = 0
     
-    // 音楽を鳴らす
-    var player: AVAudioPlayer?
+    // SEManagerを実体化
     var soundManeger = SEManager()
-    
-    // BGM再生のメソッド
-    func play(soundName: String) {
-        
-        // String型の引数からサウンドファイルを読み込む
-        let soundPath = NSBundle.mainBundle().bundlePath.stringByAppendingPathComponent(soundName)
-        // 読み込んだファイルにパスをつける
-        let url: NSURL? = NSURL.fileURLWithPath(soundPath)
-        // playerに読み込んだmp3ファイルへのパスを設定する
-        player = AVAudioPlayer(contentsOfURL: url, error: nil)
-        player?.numberOfLoops = -1
-        player?.prepareToPlay()
-        player?.play()
-    }
-
-
-    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        // menButtonを丸くする
+        menButton.layer.masksToBounds = true
+        menButton.layer.cornerRadius = 45.0
+        menButton.layer.borderColor = UIColor.orangeColor().CGColor
+        menButton.layer.borderWidth = 4
+        
+        // womenButtonを丸くする
+        womenButton.layer.masksToBounds = true
+        womenButton.layer.cornerRadius = 45.0
+        womenButton.layer.borderColor = UIColor.orangeColor().CGColor
+        womenButton.layer.borderWidth = 4
+
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
         
@@ -67,10 +63,6 @@ class ViewController: UIViewController {
         
         // randomTextの表示
         randomPersonImageView()
-        
-        // BGMの再生
-        play("BGM.mp3")
-
         
     }
     
@@ -148,32 +140,29 @@ class ViewController: UIViewController {
         randomInt = Int(arc4random_uniform(2))
         imageValueLabel.text = ""
         
-        switch randomInt {
-        case 0:
-            
+        
+        if randomInt == 0 {
             // あとで消す　Button属性
-            imageValueLabel.text = "おとこ"
+            imageValueLabel.text = "おっさん"
             
             // menRight.pngを実体化
-            let rightManImage = UIImage(named: "ossan.png")
+            let rightManImage = UIImage(named: "oyazi.png")
             
             // personImageViewのimageにmenRight.pngを設定
             personImageView.image = rightManImage
             
-        case 1:
+        } else if randomInt == 1 {
             // あとで消す　Button属性
-            imageValueLabel.text = "きょじん"
+            imageValueLabel.text = "ぎゃる"
             // womenRight.pngを実体化
-            let rightWomenImage = UIImage(named: "kyozin.png")
+            let rightWomenImage = UIImage(named: "gal.png")
             
             // personImageViewのimageにwomenRight.pngを設定
             personImageView.image = rightWomenImage
-            
-        default:
+        } else {
             println("エラー")
         }
     }
-    
     
     // ゲームスタート画面を表示する
     func addGameStartView() {
@@ -190,7 +179,7 @@ class ViewController: UIViewController {
     @IBAction func manButtonTapped(sender: AnyObject) {
         
         // imageValueが、属性ラベルと一致していたら
-        if imageValueLabel.text == "おとこ" {
+        if imageValueLabel.text == "おっさん" {
             trueAnswer()
             // Scoreを更新
             addScore()
@@ -208,7 +197,7 @@ class ViewController: UIViewController {
     @IBAction func ladyButtonTapped(sender: AnyObject) {
         
         // imageValueが、属性ラベルと一致していたら
-        if imageValueLabel.text == "きょじん" {
+        if imageValueLabel.text == "ぎゃる" {
             trueAnswer()
             // Scoreを更新
             addScore()
