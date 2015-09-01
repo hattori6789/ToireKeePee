@@ -27,16 +27,16 @@
                                     <constraint firstAttribute="height" constant="80" id="VnD-M8-fiK"/>
                                     <constraint firstAttribute="width" constant="240" id="lRV-TW-Chc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-fI-LMQ">
-                                <rect key="frame" x="220" y="400" width="160" height="40"/>
+                                <rect key="frame" x="200" y="390" width="200" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3vb-7L-coJ"/>
-                                    <constraint firstAttribute="width" constant="160" id="JkY-Ps-oMV"/>
+                                    <constraint firstAttribute="height" constant="60" id="3vb-7L-coJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="JkY-Ps-oMV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="スタート">
@@ -104,7 +104,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLY-Vq-gOW" userLabel="ImageValueLabel">
-                                                <rect key="frame" x="69" y="51" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="-2" y="-34" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -215,20 +215,20 @@
                                         <rect key="frame" x="0.0" y="103" width="320" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スコア" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcP-29-Dsw">
-                                                <rect key="frame" x="135" y="56" width="51" height="21"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="124" y="52" width="72" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-qx-oe3" userLabel="GameOverScoreLabel">
-                                                <rect key="frame" x="120" y="81" width="81" height="39"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <rect key="frame" x="108" y="76" width="104" height="49"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-SM-7Cl" userLabel="highScoreLabel">
-                                                <rect key="frame" x="138" y="132" width="44" height="21"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="130" y="128" width="61" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -245,12 +245,13 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-NV-RTi">
-                                        <rect key="frame" x="80" y="423" width="160" height="36"/>
+                                        <rect key="frame" x="60" y="423" width="200" height="60"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="evz-jc-fhu"/>
+                                            <constraint firstAttribute="height" constant="60" id="SoB-Qp-fzm"/>
+                                            <constraint firstAttribute="width" constant="200" id="evz-jc-fhu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="もう一度やる">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

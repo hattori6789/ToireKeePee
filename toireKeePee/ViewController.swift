@@ -38,10 +38,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        // gameOverScoreLabelを0にする
-        gameOverScoreLabel.text = String(score)
-        
+                
         // 画面読み込み時はgameOverViewを非表示にする
         gameOverView.hidden = true
         
@@ -130,11 +127,12 @@ class ViewController: UIViewController {
         // judgiContainerViewを表示
         judgeContainerView.hidden = false
         
-        // judgeImageViewにbatsu.pngを表示する
-        let judgeImage = UIImage(named: "batsu.png")
         
+        // judgeImageViewにbatsu.pngを表示する
+        // let judgeImage = UIImage(named: "batsu.png")
         // judgeImageViewを表示？？
-        judgeImageView.image = judgeImage
+        // judgeImageView.image = judgeImage
+        
         
         // batsuサウンドを鳴らす
         soundManeger.sePlay("batsu.mp3")
@@ -148,6 +146,8 @@ class ViewController: UIViewController {
         addHighScore()
         
         resultHighScore()
+        
+        personImageView.image = UIImage(named: "munku.png")
 
     }
     

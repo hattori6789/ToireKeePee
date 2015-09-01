@@ -12,6 +12,7 @@
 		020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CF91B8BDEB200263781 /* BGM.mp3 */; };
 		020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFB1B8BE04300263781 /* maru.mp3 */; };
 		020A3CFE1B8BE04300263781 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFC1B8BE04300263781 /* batsu.mp3 */; };
+		022B9DCB1B959366000E5827 /* munku.png in Resources */ = {isa = PBXBuildFile; fileRef = 022B9DCA1B959366000E5827 /* munku.png */; };
 		0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4ED1B790CE00075252D /* AppDelegate.swift */; };
 		0268B4F01B790CE00075252D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4EF1B790CE00075252D /* ViewController.swift */; };
 		0268B4F31B790CE00075252D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0268B4F11B790CE00075252D /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		020A3CF91B8BDEB200263781 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
 		020A3CFB1B8BE04300263781 /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
 		020A3CFC1B8BE04300263781 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
+		022B9DCA1B959366000E5827 /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
 		0268B4E81B790CE00075252D /* toireKeePee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toireKeePee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0268B4EC1B790CE00075252D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0268B4ED1B790CE00075252D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		0268B50F1B790DE30075252D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				022B9DCA1B959366000E5827 /* munku.png */,
 				020A3CF51B8BDDF300263781 /* gal.png */,
 				027A50901B952CBE00EC007D /* background.png */,
 				020A3CF61B8BDDF300263781 /* oyazi.png */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
+				022B9DCB1B959366000E5827 /* munku.png in Resources */,
 				020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */,
 				020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */,
 				0286A6961B9580B200492BA4 /* hue.mp3 in Resources */,
