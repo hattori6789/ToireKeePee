@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
     @IBOutlet weak var gameOverView: UIView!
     @IBOutlet weak var againButton: UIButton!
@@ -144,7 +145,9 @@ class ViewController: UIViewController {
         // gameOverScoreLabelにスコアを代入
         gameOverScoreLabel.text = String(score)
         
-
+        addHighScore()
+        
+        resultHighScore()
 
     }
     
@@ -170,6 +173,10 @@ class ViewController: UIViewController {
         
         // gameOverScoreLabelにスコアを代入
         gameOverScoreLabel.text = String(score)
+        
+        addHighScore()
+        
+        resultHighScore()
 
     }
     
@@ -186,6 +193,31 @@ class ViewController: UIViewController {
         scoreLabel.text = "SCORE: \(String(score))"
     }
     
+    // highScore表示処理
+    func resultHighScore(){
+        let ud = NSUserDefaults.standardUserDefaults()
+        let rappedHighScore = ud.objectForKey("udScore") as? Int
+        if rappedHighScore == nil {
+            highScoreLabel.text = "ハイスコア: 0"
+        } else {
+            if let highScore = rappedHighScore {
+                highScoreLabel.text = "ハイスコア: \(highScore)"
+            }
+        }
+        
+    }
+    
+    // highScoreの更新
+    func addHighScore() {
+        // highScore用のUserDefaultsの実装
+        let ud = NSUserDefaults.standardUserDefaults()
+        let highScore = ud.objectForKey("udScore") as? Int
+        if score >= highScore {
+            ud.setObject(score, forKey: "udScore")
+            ud.synchronize()
+        }
+    }
+
     
     // personImageViewをランダムに更新し、imageValueLabelを合わせて更新する関数
     func randomPersonImageView() {

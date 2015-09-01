@@ -226,7 +226,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-SM-7Cl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-SM-7Cl" userLabel="highScoreLabel">
                                                 <rect key="frame" x="138" y="132" width="44" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -301,6 +301,7 @@
                         <outlet property="backgroundImageView" destination="cmn-Np-iDw" id="mJY-HF-cz8"/>
                         <outlet property="gameOverScoreLabel" destination="eKf-qx-oe3" id="gRH-Pd-RCK"/>
                         <outlet property="gameOverView" destination="8rG-TK-m3C" id="PT3-db-pw4"/>
+                        <outlet property="highScoreLabel" destination="WQ9-SM-7Cl" id="pfv-LD-nkr"/>
                         <outlet property="imageValueLabel" destination="KLY-Vq-gOW" id="q0E-Wd-ZQu"/>
                         <outlet property="judgeContainerView" destination="Hs9-Bj-ef5" id="G3P-ya-7kN"/>
                         <outlet property="judgeImageView" destination="ZZS-5Q-f1u" id="ZKK-Gg-BnJ"/>
