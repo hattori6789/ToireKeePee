@@ -22,6 +22,7 @@
 		0268B51B1B790DF10075252D /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 0268B5141B790DF10075252D /* maru.png */; };
 		0279A24C1B79E88200CF916A /* SEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279A24B1B79E88200CF916A /* SEManager.swift */; };
 		027A50911B952CBE00EC007D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 027A50901B952CBE00EC007D /* background.png */; };
+		0286A6961B9580B200492BA4 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0286A6951B9580B200492BA4 /* hue.mp3 */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		0268B5141B790DF10075252D /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
 		0279A24B1B79E88200CF916A /* SEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEManager.swift; sourceTree = "<group>"; };
 		027A50901B952CBE00EC007D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0286A6951B9580B200492BA4 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				020A3CF91B8BDEB200263781 /* BGM.mp3 */,
 				020A3CFB1B8BE04300263781 /* maru.mp3 */,
 				020A3CFC1B8BE04300263781 /* batsu.mp3 */,
+				0286A6951B9580B200492BA4 /* hue.mp3 */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
 				020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */,
 				020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */,
+				0286A6961B9580B200492BA4 /* hue.mp3 in Resources */,
 				020A3CF71B8BDDF300263781 /* gal.png in Resources */,
 				020A3CF81B8BDDF300263781 /* oyazi.png in Resources */,
 				0268B51B1B790DF10075252D /* maru.png in Resources */,

@@ -24,14 +24,14 @@ class StartViewController: UIViewController {
         titleLabel.layer.masksToBounds = true
         titleLabel.layer.cornerRadius = 10.0
         titleLabel.layer.borderColor = UIColor.orangeColor().CGColor
-        titleLabel.layer.borderWidth = 4
+        titleLabel.layer.borderWidth = 3
 
         
         
         startButton.layer.masksToBounds = true
         startButton.layer.cornerRadius = 10.0
         startButton.layer.borderColor = UIColor.orangeColor().CGColor
-        startButton.layer.borderWidth = 4
+        startButton.layer.borderWidth = 3
 
         
         // String型の引数からサウンドファイルを読み込む

@@ -11,6 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var gameOverScoreLabel: UILabel!
+    @IBOutlet weak var gameOverView: UIView!
+    @IBOutlet weak var againButton: UIButton!
     @IBOutlet weak var menButton: UIButton!
     @IBOutlet weak var womenButton: UIButton!
     @IBOutlet weak var judgeContainerView: UIView!
@@ -35,13 +38,25 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // menButtonを丸くする
+        // gameOverScoreLabelを0にする
+        gameOverScoreLabel.text = String(score)
+        
+        // 画面読み込み時はgameOverViewを非表示にする
+        gameOverView.hidden = true
+        
+        // againButtonの設定
+        againButton.layer.cornerRadius = 10.0
+        againButton.layer.borderColor = UIColor.orangeColor().CGColor
+        againButton.layer.borderWidth = 3
+
+        
+        // menButtonの設定
         menButton.layer.masksToBounds = true
         menButton.layer.cornerRadius = 45.0
         menButton.layer.borderColor = UIColor.orangeColor().CGColor
         menButton.layer.borderWidth = 4
         
-        // womenButtonを丸くする
+        // womenButtonの設定
         womenButton.layer.masksToBounds = true
         womenButton.layer.cornerRadius = 45.0
         womenButton.layer.borderColor = UIColor.orangeColor().CGColor
@@ -61,6 +76,7 @@ class ViewController: UIViewController {
         // scoreの表示
         scoreLabel.text = "SCORE: \(String(score))"
         
+
         // randomTextの表示
         randomPersonImageView()
         
@@ -78,19 +94,14 @@ class ViewController: UIViewController {
         
         // cntが0になった時の処理
         if cnt <= 0 {
-            
-            // timerLabelを0表示する
-            self.timerLabel.text = "Time:0.0"
-            
-            // timerを破棄する
-            timer.invalidate()
+           timeUp()
         }
         
     }
     
     
     
-    // 正解時に呼び出されるjudgeContainerの処理
+    // 正解時に呼び出される処理
     func trueAnswer() {
         
         // judgiContainerViewを表示
@@ -103,17 +114,63 @@ class ViewController: UIViewController {
         soundManeger.sePlay("maru.mp3")
     }
     
-    // 不正解時に呼び出されるjudgeContainerの処理
+    // 不正解時に呼び出される処理
     func falseAnswer() {
+        
+        // タイマー処理の停止
+        timer.invalidate()
+        
+        // menButtonを非表示
+        menButton.hidden = true
+        
+        // womenButtonを非表示
+        womenButton.hidden = true
         
         // judgiContainerViewを表示
         judgeContainerView.hidden = false
         
         // judgeImageViewにbatsu.pngを表示する
         let judgeImage = UIImage(named: "batsu.png")
+        
+        // judgeImageViewを表示？？
         judgeImageView.image = judgeImage
         
+        // batsuサウンドを鳴らす
         soundManeger.sePlay("batsu.mp3")
+        
+        // gameOverViewを表示
+        gameOverView.hidden = false
+        
+        // gameOverScoreLabelにスコアを代入
+        gameOverScoreLabel.text = String(score)
+        
+
+
+    }
+    
+    func timeUp() {
+        
+        // gameOverViewを表示
+        gameOverView.hidden = false
+        
+        // timerLabelを0表示する
+        self.timerLabel.text = "Time:0.0"
+        
+        // タイマー処理の停止
+        timer.invalidate()
+        
+        // 終了の笛の音を鳴らす
+        soundManeger.sePlay("hue.mp3")
+        
+        // menButtonを非表示
+        menButton.hidden = true
+        
+        // womenButtonを非表示
+        womenButton.hidden = true
+        
+        // gameOverScoreLabelにスコアを代入
+        gameOverScoreLabel.text = String(score)
+
     }
     
     
@@ -164,14 +221,8 @@ class ViewController: UIViewController {
         }
     }
     
-    // ゲームスタート画面を表示する
-    func addGameStartView() {
-    }
-    
     // ゲームオーバー画面を表示する
     func addGameOrverView() {
-        // デバッグ用、後で消す
-        println("ゲームオーバー")
     }
     
     
@@ -186,9 +237,9 @@ class ViewController: UIViewController {
             
             
         } else {
+            
+            // 不正解時の処理
             falseAnswer()
-            // ゲームオーバー処理
-            addGameOrverView()
             
         }
         
@@ -203,10 +254,9 @@ class ViewController: UIViewController {
             addScore()
             
         } else {
+            
+            // 不正解時の処理
             falseAnswer()
-
-            //　ゲームオーバー処理
-            addGameOrverView()
             
         }
     }
