@@ -9,8 +9,10 @@
 import UIKit
 import AVFoundation
 
+
 class ViewController: UIViewController {
     
+    @IBOutlet weak var setUpLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
     @IBOutlet weak var gameOverView: UIView!
@@ -27,16 +29,17 @@ class ViewController: UIViewController {
     
     // タイマーの秒数の設定
     var cnt: Float = 20
+    
     // タイマーの作成
     var timer: NSTimer!
+    
     // scoreのデフォルト値
     var score: Int = 0
     
-    // SEManagerを実体化
-    var soundManeger = SEManager()
+    // SoundManagerを実体化
+    var soundManager = SoundManager()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
                 
         // 画面読み込み時はgameOverViewを非表示にする
@@ -46,20 +49,20 @@ class ViewController: UIViewController {
         againButton.layer.cornerRadius = 10.0
         againButton.layer.borderColor = UIColor.orangeColor().CGColor
         againButton.layer.borderWidth = 3
-
+        
         
         // menButtonの設定
         menButton.layer.masksToBounds = true
-        menButton.layer.cornerRadius = 45.0
-        menButton.layer.borderColor = UIColor.orangeColor().CGColor
+        menButton.layer.cornerRadius = 40.0
+        menButton.layer.borderColor = UIColor.rgb(r: 52, g: 98, b: 175, alpha: 1.0).CGColor
         menButton.layer.borderWidth = 4
         
         // womenButtonの設定
         womenButton.layer.masksToBounds = true
-        womenButton.layer.cornerRadius = 45.0
-        womenButton.layer.borderColor = UIColor.orangeColor().CGColor
+        womenButton.layer.cornerRadius = 40.0
+        womenButton.layer.borderColor = UIColor.rgb(r: 230, g: 102, b: 114, alpha: 1.0).CGColor
         womenButton.layer.borderWidth = 4
-
+        
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
         
@@ -67,19 +70,60 @@ class ViewController: UIViewController {
         let backgroundImage = UIImage(named: "background.png")
         backgroundImageView.image = backgroundImage
         
-        // Timerの表示
-        timerLabel.text = "Time:\(cnt)"
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
-        
         // scoreの表示
-        scoreLabel.text = "SCORE: \(String(score))"
+        scoreLabel.text = "SCORE: 0"
         
-
+        timerLabel.text = "Time: 停止"
+        
         // randomTextの表示
         randomPersonImageView()
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        // Labelを、、、
+        setUpLabel.alpha = 0
+        
+        // タッチイベントの状態確認と、、、
+        touchEventCheck()
+        
+        // アニメーションの設定
+        var duration = 1.0
+        var delay = 1.0
+        
+        
+        UIView.animateWithDuration(duration, delay: delay, options: nil, animations: { () -> Void in
+            self.setUpLabel.alpha = 1
+            self.setUpLabel.text = "よーーーい"
+            }, completion: {(Bool) -> Void in
+                UIView.animateWithDuration(duration, animations: {
+                    () -> Void in
+                    self.touchEventCheck()
+                    self.setUpLabel.alpha = 0.0
+                    self.setUpLabel.text = "どんっ！！"
+                })
+                // Timerの表示
+                self.timerLabel.text = "Time:\(self.cnt)"
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
+                
+        })
+        
+
+    }
+    
+    // touchEventの状態の状態判定
+    func touchEventCheck() {
+        if UIApplication.sharedApplication().isIgnoringInteractionEvents() == false {
+            
+            // タッチイベントを有効にする処理
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        } else {
+            
+            // タッチイベントを無効にする処理
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        }
+    }
+
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド
     func countDown(timer : NSTimer) {
         
@@ -92,7 +136,7 @@ class ViewController: UIViewController {
         
         // cntが0になった時の処理
         if cnt <= 0 {
-           timeUp()
+            timeUp()
         }
         
     }
@@ -107,9 +151,12 @@ class ViewController: UIViewController {
         
         // judgeImageViewにmaru.pngを表示する
         let judgeImage = UIImage(named: "maru.png")
+        
+        // judgeImageViewを代入
         judgeImageView.image = judgeImage
         
-        soundManeger.sePlay("maru.mp3")
+        // maruサウンドを鳴らす
+        soundManager.sePlay("maru.mp3")
     }
     
     // 不正解時に呼び出される処理
@@ -127,15 +174,14 @@ class ViewController: UIViewController {
         // judgiContainerViewを表示
         judgeContainerView.hidden = false
         
-        
         // judgeImageViewにbatsu.pngを表示する
-        // let judgeImage = UIImage(named: "batsu.png")
-        // judgeImageViewを表示？？
-        // judgeImageView.image = judgeImage
+        let judgeImage = UIImage(named: "batsu.png")
         
+        // judgeImageViewを代入
+        judgeImageView.image = judgeImage
         
         // batsuサウンドを鳴らす
-        soundManeger.sePlay("batsu.mp3")
+        soundManager.sePlay("batsu.mp3")
         
         // gameOverViewを表示
         gameOverView.hidden = false
@@ -148,7 +194,7 @@ class ViewController: UIViewController {
         resultHighScore()
         
         personImageView.image = UIImage(named: "munku.png")
-
+        
     }
     
     func timeUp() {
@@ -163,7 +209,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         
         // 終了の笛の音を鳴らす
-        soundManeger.sePlay("hue.mp3")
+        soundManager.sePlay("hue.mp3")
         
         // menButtonを非表示
         menButton.hidden = true
@@ -177,7 +223,7 @@ class ViewController: UIViewController {
         addHighScore()
         
         resultHighScore()
-
+        
     }
     
     
@@ -217,7 +263,7 @@ class ViewController: UIViewController {
             ud.synchronize()
         }
     }
-
+    
     
     // personImageViewをランダムに更新し、imageValueLabelを合わせて更新する関数
     func randomPersonImageView() {
@@ -292,13 +338,14 @@ class ViewController: UIViewController {
             
         }
     }
+    
     @IBAction func judgeButtonTapped(sender: AnyObject) {
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
         
         // imageValueをランダムに更新する処理
         randomPersonImageView()
-
+        
     }
-   
+    
 }

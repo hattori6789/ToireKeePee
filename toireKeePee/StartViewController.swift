@@ -11,47 +11,44 @@ import AVFoundation
 
 class StartViewController: UIViewController {
     
+    // リリース前に消す　versionLabel関連
+    @IBOutlet weak var versionLabel: UILabel!
+    //
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
-    
-    // 音楽を鳴らす
-    var player: AVAudioPlayer?
-    var soundManeger = SEManager()
-    
-    // BGM再生のメソッド
-    func play(soundName: String) {
 
+    // 音楽再生の引数を定義
+    var player: AVAudioPlayer?
+    
+    // SoundManagerクラスを実体化
+    var soundManager = SoundManager()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        /// リリース前に消す　versionLabel関連 ///
+        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
+        var CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
+        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
+        //////////////////////////////////////
+        
+        
+        // タイトルラベルの設定
         titleLabel.layer.masksToBounds = true
         titleLabel.layer.cornerRadius = 10.0
         titleLabel.layer.borderColor = UIColor.orangeColor().CGColor
         titleLabel.layer.borderWidth = 3
-
         
-        
+        // スタートボタンの設定
         startButton.layer.masksToBounds = true
         startButton.layer.cornerRadius = 10.0
         startButton.layer.borderColor = UIColor.orangeColor().CGColor
         startButton.layer.borderWidth = 3
 
         
-        // String型の引数からサウンドファイルを読み込む
-        let soundPath = NSBundle.mainBundle().bundlePath.stringByAppendingPathComponent(soundName)
-        // 読み込んだファイルにパスをつける
-        let url: NSURL? = NSURL.fileURLWithPath(soundPath)
-        // playerに読み込んだmp3ファイルへのパスを設定する
-        player = AVAudioPlayer(contentsOfURL: url, error: nil)
-        player?.numberOfLoops = -1
-        player?.prepareToPlay()
-        player?.play()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         // BGMの再生
-        play("BGM.mp3")
-        
-
+        soundManager.bgmPlay("BGM.mp3")
 
     }
 
