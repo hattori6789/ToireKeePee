@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="6P8-pQ-FJF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKa-HV-DaP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTH-Cc-deO">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トイレ運動会" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juc-Yj-TXM">
-                                <rect key="frame" x="180" y="80" width="240" height="80"/>
+                                <rect key="frame" x="40" y="80" width="240" height="80"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="VnD-M8-fiK"/>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-fI-LMQ">
-                                <rect key="frame" x="200" y="390" width="200" height="60"/>
+                                <rect key="frame" x="60" y="374" width="200" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="3vb-7L-coJ"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXI-cb-kPY" userLabel="VersionLabel">
-                                <rect key="frame" x="287" y="558" width="26" height="12"/>
+                                <rect key="frame" x="147" y="526" width="26" height="12"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,6 +67,7 @@
                             <constraint firstItem="juc-Yj-TXM" firstAttribute="top" secondItem="OhC-6l-fgP" secondAttribute="bottom" constant="60" id="vKx-kI-HjS"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="startButton" destination="tHs-fI-LMQ" id="A6U-wt-aFb"/>
                         <outlet property="titleLabel" destination="juc-Yj-TXM" id="TaG-Ks-aro"/>
@@ -141,7 +142,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-xn-6Vs" userLabel="ぎゃる">
-                                                <rect key="frame" x="25" y="402" width="80" height="80"/>
+                                                <rect key="frame" x="25" y="398" width="80" height="80"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="5U7-YC-MlY"/>
@@ -172,11 +173,11 @@
                                             <constraint firstAttribute="centerY" secondItem="Oc9-Md-HW4" secondAttribute="centerY" multiplier="0.8" id="WNG-OJ-oED"/>
                                             <constraint firstAttribute="centerX" secondItem="Oc9-Md-HW4" secondAttribute="centerX" id="WNq-uY-U0o"/>
                                             <constraint firstAttribute="bottom" secondItem="1vS-DA-avD" secondAttribute="bottom" constant="90" id="bg5-zP-Khx"/>
+                                            <constraint firstItem="xIa-xn-6Vs" firstAttribute="leading" secondItem="rhg-79-gsx" secondAttribute="leading" constant="25" id="d4C-cs-qhn"/>
                                             <constraint firstItem="Xh6-z6-d0K" firstAttribute="leading" secondItem="rhg-79-gsx" secondAttribute="leading" constant="20" id="kbn-ID-Xyb"/>
                                             <constraint firstAttribute="trailing" secondItem="Ued-yM-JEg" secondAttribute="trailing" constant="20" id="pji-ed-rSL"/>
-                                            <constraint firstItem="xIa-xn-6Vs" firstAttribute="leading" secondItem="rhg-79-gsx" secondAttribute="leading" constant="25" id="qcu-3k-Qft"/>
                                             <constraint firstItem="Oc9-Md-HW4" firstAttribute="top" secondItem="cQ9-qK-qzy" secondAttribute="bottom" id="utn-Zr-DkT"/>
-                                            <constraint firstAttribute="bottom" secondItem="xIa-xn-6Vs" secondAttribute="bottom" constant="86" id="vdM-qZ-Vob"/>
+                                            <constraint firstAttribute="bottom" secondItem="xIa-xn-6Vs" secondAttribute="bottom" constant="90" id="yOc-bh-goX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -282,15 +283,58 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUg-Y7-XET" userLabel="ShareButtonContainer">
+                                        <rect key="frame" x="0.0" y="358" width="320" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-NF-84J" userLabel="TwitterButton">
+                                                <rect key="frame" x="40" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.33333333333333331" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6n2-qM-tjY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="j4r-NO-xZs"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="twitterLogo"/>
+                                                <connections>
+                                                    <action selector="twitterTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bdt-UB-40c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-si-DgX" userLabel="LineButton">
+                                                <rect key="frame" x="230" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XJd-h5-5sV"/>
+                                                    <constraint firstAttribute="width" constant="50" id="mPD-ZQ-apy"/>
+                                                </constraints>
+                                                <state key="normal" image="lineLogo">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lineTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bi3-dM-xs9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="11e-NF-84J" firstAttribute="leading" secondItem="uUg-Y7-XET" secondAttribute="leading" constant="40" id="7Re-hh-Edg"/>
+                                            <constraint firstAttribute="centerY" secondItem="Wae-si-DgX" secondAttribute="centerY" id="igV-dM-vqz"/>
+                                            <constraint firstAttribute="centerY" secondItem="11e-NF-84J" secondAttribute="centerY" id="qsk-X9-YQV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wae-si-DgX" secondAttribute="trailing" constant="40" id="vJP-jz-z0t"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="uUg-Y7-XET" secondAttribute="centerX" id="7gt-oV-THm"/>
+                                    <constraint firstItem="uUg-Y7-XET" firstAttribute="height" secondItem="hX8-NV-RTi" secondAttribute="height" id="96x-qB-5GD"/>
                                     <constraint firstAttribute="centerX" secondItem="XJA-9e-TI4" secondAttribute="centerX" id="Bz4-LU-ahg"/>
                                     <constraint firstItem="XJA-9e-TI4" firstAttribute="top" secondItem="cfN-48-uNO" secondAttribute="bottom" constant="10" id="Ffx-JP-dkC"/>
+                                    <constraint firstAttribute="trailing" secondItem="uUg-Y7-XET" secondAttribute="trailing" id="LEi-8z-i1B"/>
                                     <constraint firstAttribute="centerY" secondItem="hX8-NV-RTi" secondAttribute="centerY" multiplier="0.57" id="Om7-yH-gBm"/>
                                     <constraint firstAttribute="centerX" secondItem="hX8-NV-RTi" secondAttribute="centerX" id="QSt-1N-t7m"/>
                                     <constraint firstAttribute="centerX" secondItem="cfN-48-uNO" secondAttribute="centerX" id="W9f-Yf-1BJ"/>
                                     <constraint firstAttribute="centerY" secondItem="XJA-9e-TI4" secondAttribute="centerY" multiplier="1.4" id="XgM-7s-84O"/>
+                                    <constraint firstItem="hX8-NV-RTi" firstAttribute="top" secondItem="uUg-Y7-XET" secondAttribute="bottom" constant="50" id="foA-OJ-Mb9"/>
+                                    <constraint firstItem="uUg-Y7-XET" firstAttribute="leading" secondItem="8rG-TK-m3C" secondAttribute="leading" id="gEE-Wj-tpz"/>
                                     <constraint firstAttribute="width" secondItem="XJA-9e-TI4" secondAttribute="width" id="xiD-rF-YCb"/>
                                 </constraints>
                             </view>
@@ -322,11 +366,13 @@
                         <outlet property="imageValueLabel" destination="KLY-Vq-gOW" id="q0E-Wd-ZQu"/>
                         <outlet property="judgeContainerView" destination="Hs9-Bj-ef5" id="G3P-ya-7kN"/>
                         <outlet property="judgeImageView" destination="ZZS-5Q-f1u" id="ZKK-Gg-BnJ"/>
+                        <outlet property="line" destination="Wae-si-DgX" id="qng-ew-N5N"/>
                         <outlet property="menButton" destination="1vS-DA-avD" id="JA4-GV-kYT"/>
                         <outlet property="personImageView" destination="Oc9-Md-HW4" id="fGm-lL-Prw"/>
                         <outlet property="scoreLabel" destination="Xh6-z6-d0K" id="xo3-tB-8qW"/>
                         <outlet property="setUpLabel" destination="cQ9-qK-qzy" id="JLH-fe-4Ky"/>
                         <outlet property="timerLabel" destination="Ued-yM-JEg" id="L7a-o7-JW6"/>
+                        <outlet property="twitter" destination="11e-NF-84J" id="gc7-B4-5Mv"/>
                         <outlet property="womenButton" destination="xIa-xn-6Vs" id="Vt8-L7-cFf"/>
                     </connections>
                 </viewController>
@@ -337,6 +383,8 @@
     </scenes>
     <resources>
         <image name="background.png" width="640" height="1136"/>
+        <image name="lineLogo" width="80" height="80"/>
+        <image name="twitterLogo" width="843" height="843"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Fo-1E-Ko0"/>

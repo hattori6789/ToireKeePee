@@ -25,6 +25,7 @@
 		0286A6961B9580B200492BA4 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0286A6951B9580B200492BA4 /* hue.mp3 */; };
 		028D23D01B964F58003302C1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D23CF1B964F58003302C1 /* RGBExtention.swift */; };
 		02A2E4AF1B95D20A0060BE32 /* oyazi.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A2E4AE1B95D20A0060BE32 /* oyazi.png */; };
+		02A633EC1BAB1A1200295BFD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A633EB1BAB1A1200295BFD /* Social.framework */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		0286A6951B9580B200492BA4 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		028D23CF1B964F58003302C1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
 		02A2E4AE1B95D20A0060BE32 /* oyazi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oyazi.png; sourceTree = "<group>"; };
+		02A633EB1BAB1A1200295BFD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A633EC1BAB1A1200295BFD /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 		0268B4DF1B790CE00075252D = {
 			isa = PBXGroup;
 			children = (
+				02A633EB1BAB1A1200295BFD /* Social.framework */,
 				0268B4EA1B790CE00075252D /* toireKeePee */,
 				0268B5001B790CE00075252D /* toireKeePeeTests */,
 				0268B4E91B790CE00075252D /* Products */,

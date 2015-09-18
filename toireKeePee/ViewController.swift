@@ -8,10 +8,12 @@
 
 import UIKit
 import AVFoundation
-
+import Social
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var twitter: UIButton!
+    @IBOutlet weak var line: UIButton!
     @IBOutlet weak var setUpLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
@@ -77,6 +79,14 @@ class ViewController: UIViewController {
         
         // randomTextの表示
         randomPersonImageView()
+        
+        // Twitter,　Lineが利用可能状態か確認
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "line://")!) {
+            line.enabled = true
+        }
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            twitter.enabled = true
+        }
         
     }
     
@@ -346,6 +356,27 @@ class ViewController: UIViewController {
         // imageValueをランダムに更新する処理
         randomPersonImageView()
         
+    }
+    
+    func share(type: String) {
+        let vc = SLComposeViewController(forServiceType: type)
+        vc.setInitialText("[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n")
+        self.presentViewController(vc, animated: true, completion: nil)
+
+    }
+    
+    @IBAction func twitterTapped(sender: AnyObject) {
+        share(SLServiceTypeTwitter)
+    }
+    
+    @IBAction func lineTapped(sender: AnyObject) {
+        var message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n"
+        if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
+            if let uri = NSURL(string: "line://msg/text/" + encoded) {
+                UIApplication.sharedApplication().openURL(uri)
+            }
+        }
+
     }
     
 }
