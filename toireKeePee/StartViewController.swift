@@ -29,7 +29,7 @@ class StartViewController: UIViewController {
         
         /// リリース前に消す？　versionLabel関連 ///
         let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
-        var CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
+        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
         versionLabel.text = "Ver.\(CFBundleShortVersionString)"
         //////////////////////////////////////
         

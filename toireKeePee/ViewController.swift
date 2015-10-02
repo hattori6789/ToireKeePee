@@ -98,11 +98,11 @@ class ViewController: UIViewController {
         touchEventCheck()
         
         // アニメーションの設定
-        var duration = 1.0
-        var delay = 1.0
+        let duration = 1.0
+        let delay = 1.0
         
         
-        UIView.animateWithDuration(duration, delay: delay, options: nil, animations: { () -> Void in
+        UIView.animateWithDuration(duration, delay: delay, options: .CurveEaseInOut, animations: { () -> Void in
             self.setUpLabel.alpha = 1
             self.setUpLabel.text = "よーーーい"
             }, completion: {(Bool) -> Void in
@@ -278,7 +278,6 @@ class ViewController: UIViewController {
     // personImageViewをランダムに更新し、imageValueLabelを合わせて更新する関数
     func randomPersonImageView() {
         
-        var text: String
         var randomInt: Int
         
         // 乱数を作る
@@ -305,7 +304,7 @@ class ViewController: UIViewController {
             // personImageViewのimageにwomenRight.pngを設定
             personImageView.image = rightWomenImage
         } else {
-            println("エラー")
+            print("エラー")
         }
     }
     
@@ -370,7 +369,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lineTapped(sender: AnyObject) {
-        var message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n"
+        let message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n"
         if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
             if let uri = NSURL(string: "line://msg/text/" + encoded) {
                 UIApplication.sharedApplication().openURL(uri)

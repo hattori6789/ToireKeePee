@@ -9,12 +9,12 @@ class SoundManager: NSObject {
     
     // 音を再生するメソッド
     func sePlay(soundName: String) {
-        // サウンドファイルを読み込む
-        var soundPath = NSBundle.mainBundle().bundlePath.stringByAppendingPathComponent(soundName)
+        // バンドルPathの作成
+        let bndlPath = NSBundle.mainBundle().bundlePath
         // 読み込んだファイルにパスをつける
-        let url: NSURL? = NSURL.fileURLWithPath(soundPath)
-        // playerに読み込んだmp3ファイルへのパスを設定する
-        player = AVAudioPlayer(contentsOfURL: url, error: nil)
+        let url = NSURL.fileURLWithPath(bndlPath).URLByAppendingPathComponent(soundName)
+         // playerに読み込んだmp3ファイルへのパスを設定する
+        player = try! AVAudioPlayer(contentsOfURL: url, fileTypeHint: nil)
         player?.prepareToPlay()
         player?.play()
     }
@@ -23,14 +23,14 @@ class SoundManager: NSObject {
     // BGM再生のメソッド
     func bgmPlay(soundName: String) {
         
-        // String型の引数からサウンドファイルを読み込む
-        let soundPath = NSBundle.mainBundle().bundlePath.stringByAppendingPathComponent(soundName)
+        // バンドルPathの作成
+        let bndlPath = NSBundle.mainBundle().bundlePath
         
         // 読み込んだファイルにパスをつける
-        let url: NSURL? = NSURL.fileURLWithPath(soundPath)
+        let url = NSURL.fileURLWithPath(bndlPath).URLByAppendingPathComponent(soundName)
         
         // playerに読み込んだmp3ファイルへのパスを設定する
-        player = AVAudioPlayer(contentsOfURL: url, error: nil)
+        player = try! AVAudioPlayer(contentsOfURL: url, fileTypeHint: nil)
         player?.numberOfLoops = -1
         player?.prepareToPlay()
         player?.play()
