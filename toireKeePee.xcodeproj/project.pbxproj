@@ -11,6 +11,7 @@
 		020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFB1B8BE04300263781 /* maru.mp3 */; };
 		020A3CFE1B8BE04300263781 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFC1B8BE04300263781 /* batsu.mp3 */; };
 		023311E91B966BA4002B46CA /* munku.png in Resources */ = {isa = PBXBuildFile; fileRef = 023311E81B966BA4002B46CA /* munku.png */; };
+		0253EF571BC1FF3600C97578 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0253EF561BC1FF3600C97578 /* background.png */; settings = {ASSET_TAGS = (); }; };
 		0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4ED1B790CE00075252D /* AppDelegate.swift */; };
 		0268B4F01B790CE00075252D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4EF1B790CE00075252D /* ViewController.swift */; };
 		0268B4F31B790CE00075252D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0268B4F11B790CE00075252D /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		0268B51B1B790DF10075252D /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 0268B5141B790DF10075252D /* maru.png */; };
 		026ADB4A1BA037450051BE8F /* gal.png in Resources */ = {isa = PBXBuildFile; fileRef = 026ADB491BA037450051BE8F /* gal.png */; };
 		0279A24C1B79E88200CF916A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279A24B1B79E88200CF916A /* SoundManager.swift */; };
-		027A50911B952CBE00EC007D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 027A50901B952CBE00EC007D /* background.png */; };
 		0286A6961B9580B200492BA4 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0286A6951B9580B200492BA4 /* hue.mp3 */; };
 		028D23D01B964F58003302C1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D23CF1B964F58003302C1 /* RGBExtention.swift */; };
 		02A2E4AF1B95D20A0060BE32 /* oyazi.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A2E4AE1B95D20A0060BE32 /* oyazi.png */; };
@@ -44,6 +44,7 @@
 		020A3CFB1B8BE04300263781 /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
 		020A3CFC1B8BE04300263781 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
 		023311E81B966BA4002B46CA /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
+		0253EF561BC1FF3600C97578 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0268B4E81B790CE00075252D /* toireKeePee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toireKeePee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0268B4EC1B790CE00075252D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0268B4ED1B790CE00075252D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		0268B5141B790DF10075252D /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
 		026ADB491BA037450051BE8F /* gal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gal.png; sourceTree = "<group>"; };
 		0279A24B1B79E88200CF916A /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
-		027A50901B952CBE00EC007D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0286A6951B9580B200492BA4 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		028D23CF1B964F58003302C1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
 		02A2E4AE1B95D20A0060BE32 /* oyazi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oyazi.png; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				02A2E4AE1B95D20A0060BE32 /* oyazi.png */,
 				026ADB491BA037450051BE8F /* gal.png */,
 				023311E81B966BA4002B46CA /* munku.png */,
-				027A50901B952CBE00EC007D /* background.png */,
+				0253EF561BC1FF3600C97578 /* background.png */,
 				0268B5141B790DF10075252D /* maru.png */,
 				0268B5111B790DF10075252D /* batsu.png */,
 			);
@@ -254,6 +254,7 @@
 			files = (
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
 				023311E91B966BA4002B46CA /* munku.png in Resources */,
+				0253EF571BC1FF3600C97578 /* background.png in Resources */,
 				020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */,
 				020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */,
 				0286A6961B9580B200492BA4 /* hue.mp3 in Resources */,
@@ -262,7 +263,6 @@
 				026ADB4A1BA037450051BE8F /* gal.png in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
-				027A50911B952CBE00EC007D /* background.png in Resources */,
 				02A2E4AF1B95D20A0060BE32 /* oyazi.png in Resources */,
 				0268B5181B790DF10075252D /* batsu.png in Resources */,
 			);
@@ -345,7 +345,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

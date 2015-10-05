@@ -93,6 +93,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // Labelを、、、
         setUpLabel.alpha = 0
+        setUpLabel.textColor = UIColor.yellowColor()
         
         // タッチイベントの状態確認と、、、
         touchEventCheck()
