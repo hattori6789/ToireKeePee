@@ -24,7 +24,7 @@
 		0279A24C1B79E88200CF916A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279A24B1B79E88200CF916A /* SoundManager.swift */; };
 		0286A6961B9580B200492BA4 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0286A6951B9580B200492BA4 /* hue.mp3 */; };
 		028D23D01B964F58003302C1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D23CF1B964F58003302C1 /* RGBExtention.swift */; };
-		02A2E4AF1B95D20A0060BE32 /* oyazi.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A2E4AE1B95D20A0060BE32 /* oyazi.png */; };
+		02A2E4AF1B95D20A0060BE32 /* ossan.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A2E4AE1B95D20A0060BE32 /* ossan.png */; };
 		02A633EC1BAB1A1200295BFD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A633EB1BAB1A1200295BFD /* Social.framework */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 		0279A24B1B79E88200CF916A /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		0286A6951B9580B200492BA4 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		028D23CF1B964F58003302C1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
-		02A2E4AE1B95D20A0060BE32 /* oyazi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oyazi.png; sourceTree = "<group>"; };
+		02A2E4AE1B95D20A0060BE32 /* ossan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ossan.png; sourceTree = "<group>"; };
 		02A633EB1BAB1A1200295BFD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +150,7 @@
 		0268B50F1B790DE30075252D /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				02A2E4AE1B95D20A0060BE32 /* oyazi.png */,
+				02A2E4AE1B95D20A0060BE32 /* ossan.png */,
 				026ADB491BA037450051BE8F /* gal.png */,
 				023311E81B966BA4002B46CA /* munku.png */,
 				0253EF561BC1FF3600C97578 /* background.png */,
@@ -263,7 +263,7 @@
 				026ADB4A1BA037450051BE8F /* gal.png in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
-				02A2E4AF1B95D20A0060BE32 /* oyazi.png in Resources */,
+				02A2E4AF1B95D20A0060BE32 /* ossan.png in Resources */,
 				0268B5181B790DF10075252D /* batsu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,8 +345,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

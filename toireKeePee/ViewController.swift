@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
-        
+        timerLabel.textAlignment = NSTextAlignment.Left
         timerLabel.text = "Time: 停止"
         
         // randomTextの表示
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // Labelを、、、
         setUpLabel.alpha = 0
-        setUpLabel.textColor = UIColor.yellowColor()
+//        setUpLabel.textColor = UIColor.yellowColor()
         
         // タッチイベントの状態確認と、、、
         touchEventCheck()
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
         
         UIView.animateWithDuration(duration, delay: delay, options: .CurveEaseInOut, animations: { () -> Void in
             self.setUpLabel.alpha = 1
-            self.setUpLabel.text = "よーーーい"
+            self.setUpLabel.text = "よーい・・・"
             }, completion: {(Bool) -> Void in
                 UIView.animateWithDuration(duration, animations: {
                     () -> Void in
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
                     self.setUpLabel.text = "どんっ！！"
                 })
                 // Timerの表示
-                self.timerLabel.text = "Time:\(self.cnt)"
+                self.timerLabel.text = "Time: \(self.cnt)"
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
                 
         })
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         cnt -= 0.1
         
         // 桁数を指定して文字列を作り、timerLabelに表示する
-        let str = "Time:".stringByAppendingFormat("%.1f",cnt)
+        let str = "Time: ".stringByAppendingFormat("%.1f",cnt)
         timerLabel.text = str
         
         // cntが0になった時の処理
@@ -214,7 +214,7 @@ class ViewController: UIViewController {
         gameOverView.hidden = false
         
         // timerLabelを0表示する
-        self.timerLabel.text = "Time:0.0"
+        self.timerLabel.text = "Time: 0.0"
         
         // タイマー処理の停止
         timer.invalidate()
@@ -291,7 +291,7 @@ class ViewController: UIViewController {
             imageValueLabel.text = "おっさん"
             
             // menRight.pngを実体化
-            let rightManImage = UIImage(named: "oyazi.png")
+            let rightManImage = UIImage(named: "ossan.png")
             
             // personImageViewのimageにmenRight.pngを設定
             personImageView.image = rightManImage
