@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Social
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var twitter: UIButton!
@@ -18,9 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
     @IBOutlet weak var gameOverView: UIView!
-    @IBOutlet weak var againButton: UIButton!
-    @IBOutlet weak var menButton: UIButton!
-    @IBOutlet weak var womenButton: UIButton!
+    @IBOutlet weak var againButton: DesignableButton!
+    @IBOutlet weak var menButton: DesignableButton!
+    @IBOutlet weak var womenButton: DesignableButton!
     @IBOutlet weak var judgeContainerView: UIView!
     @IBOutlet weak var judgeImageView: UIImageView!
     @IBOutlet weak var imageValueLabel: UILabel!
@@ -43,27 +44,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // 画面読み込み時はgameOverViewを非表示にする
         gameOverView.hidden = true
         
         // againButtonの設定
-        againButton.layer.cornerRadius = 10.0
-        againButton.layer.borderColor = UIColor.orangeColor().CGColor
-        againButton.layer.borderWidth = 3
-        
+        // springライブラリ、attributeインスペクターで対応
+        // againButton.layer.cornerRadius = 10.0
+        // againButton.layer.borderColor = UIColor.darkGrayColor().CGColor
+        // againButton.layer.borderWidth = 3
         
         // menButtonの設定
-        menButton.layer.masksToBounds = true
-        menButton.layer.cornerRadius = 40.0
-        menButton.layer.borderColor = UIColor.rgb(r: 52, g: 98, b: 175, alpha: 1.0).CGColor
-        menButton.layer.borderWidth = 4
+        // springライブラリ、attributeインスペクターで対応
+        // menButton.layer.masksToBounds = true
+        // menButton.layer.cornerRadius = 40.0
+        // menButton.layer.borderColor = UIColor.rgb(r: 52, g: 98, b: 175, alpha: 1.0).CGColor
+        // menButton.layer.borderWidth = 3
         
         // womenButtonの設定
-        womenButton.layer.masksToBounds = true
-        womenButton.layer.cornerRadius = 40.0
-        womenButton.layer.borderColor = UIColor.rgb(r: 230, g: 102, b: 114, alpha: 1.0).CGColor
-        womenButton.layer.borderWidth = 4
+        // springライブラリ、attributeインスペクターで対応
+        // womenButton.layer.masksToBounds = true
+        // womenButton.layer.cornerRadius = 40.0
+        // womenButton.layer.borderColor = UIColor.rgb(r: 236, g: 151, b: 151, alpha: 1.0).CGColor
+        // womenButton.layer.borderWidth = 3
         
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
@@ -93,7 +96,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // Labelを、、、
         setUpLabel.alpha = 0
-//        setUpLabel.textColor = UIColor.yellowColor()
+        // setUpLabel.textColor = UIColor.yellowColor()
         
         // タッチイベントの状態確認と、、、
         touchEventCheck()
@@ -111,7 +114,7 @@ class ViewController: UIViewController {
                     () -> Void in
                     self.touchEventCheck()
                     self.setUpLabel.alpha = 0.0
-                    self.setUpLabel.text = "どんっ！！"
+                    self.setUpLabel.text = "どん！！"
                 })
                 // Timerの表示
                 self.timerLabel.text = "Time: \(self.cnt)"
@@ -119,7 +122,7 @@ class ViewController: UIViewController {
                 
         })
         
-
+        
     }
     
     // touchEventの状態の状態判定
@@ -134,7 +137,7 @@ class ViewController: UIViewController {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
         }
     }
-
+    
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド
     func countDown(timer : NSTimer) {
         
@@ -291,7 +294,7 @@ class ViewController: UIViewController {
             imageValueLabel.text = "おっさん"
             
             // menRight.pngを実体化
-            let rightManImage = UIImage(named: "ossan.png")
+            let rightManImage = UIImage(named: "men.png")
             
             // personImageViewのimageにmenRight.pngを設定
             personImageView.image = rightManImage
@@ -300,7 +303,7 @@ class ViewController: UIViewController {
             // あとで消す　Button属性
             imageValueLabel.text = "ぎゃる"
             // womenRight.pngを実体化
-            let rightWomenImage = UIImage(named: "gal.png")
+            let rightWomenImage = UIImage(named: "women.png")
             
             // personImageViewのimageにwomenRight.pngを設定
             personImageView.image = rightWomenImage
@@ -315,10 +318,10 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func manButtonTapped(sender: AnyObject) {
-        
+    @IBAction func menButtonTapped(sender: DesignableButton) {
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "おっさん" {
+            sender.animate()
             trueAnswer()
             // Scoreを更新
             addScore()
@@ -337,6 +340,7 @@ class ViewController: UIViewController {
         
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "ぎゃる" {
+            sender.animate()
             trueAnswer()
             // Scoreを更新
             addScore()
@@ -362,7 +366,7 @@ class ViewController: UIViewController {
         let vc = SLComposeViewController(forServiceType: type)
         vc.setInitialText("[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n")
         self.presentViewController(vc, animated: true, completion: nil)
-
+        
     }
     
     @IBAction func twitterTapped(sender: AnyObject) {
@@ -376,7 +380,7 @@ class ViewController: UIViewController {
                 UIApplication.sharedApplication().openURL(uri)
             }
         }
-
+        
     }
     
 }

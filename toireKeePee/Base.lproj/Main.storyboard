@@ -18,61 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTH-Cc-deO">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTH-Cc-deO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トイレ運動会" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juc-Yj-TXM">
-                                <rect key="frame" x="40" y="124" width="240" height="80"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="VnD-M8-fiK"/>
-                                    <constraint firstAttribute="width" constant="240" id="lRV-TW-Chc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="-1" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-fI-LMQ">
-                                <rect key="frame" x="60" y="454" width="200" height="60"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="3vb-7L-coJ"/>
-                                    <constraint firstAttribute="width" constant="200" id="JkY-Ps-oMV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="はじめる">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="3Fo-1E-Ko0"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXI-cb-kPY" userLabel="VersionLabel">
                                 <rect key="frame" x="146" y="541" width="28" height="12"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-fI-LMQ" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
+                                <rect key="frame" x="60" y="479" width="200" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3vb-7L-coJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="JkY-Ps-oMV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="はじめる">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="R6g-fh-bcC" eventType="touchUpInside" id="TH6-P2-bkR"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="3Fo-1E-Ko0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="xXI-cb-kPY" secondAttribute="centerX" id="5N7-S6-iGU"/>
                             <constraint firstAttribute="trailing" secondItem="aTH-Cc-deO" secondAttribute="trailing" id="Be0-cF-9xv"/>
-                            <constraint firstAttribute="centerX" secondItem="juc-Yj-TXM" secondAttribute="centerX" id="FS3-tv-tJJ"/>
-                            <constraint firstAttribute="centerY" secondItem="tHs-fI-LMQ" secondAttribute="centerY" constant="-200" id="Vf4-RO-cRP"/>
+                            <constraint firstAttribute="centerY" secondItem="tHs-fI-LMQ" secondAttribute="centerY" constant="-220" id="Vf4-RO-cRP"/>
                             <constraint firstItem="6P8-pQ-FJF" firstAttribute="top" secondItem="aTH-Cc-deO" secondAttribute="bottom" id="cF2-uN-2qK"/>
                             <constraint firstAttribute="centerX" secondItem="tHs-fI-LMQ" secondAttribute="centerX" id="f9r-kR-d78"/>
+                            <constraint firstItem="aTH-Cc-deO" firstAttribute="top" secondItem="RKa-HV-DaP" secondAttribute="top" id="gHc-1U-G25"/>
                             <constraint firstItem="aTH-Cc-deO" firstAttribute="leading" secondItem="RKa-HV-DaP" secondAttribute="leading" id="kQL-BI-R16"/>
-                            <constraint firstAttribute="centerY" secondItem="juc-Yj-TXM" secondAttribute="centerY" constant="120" id="o5Z-sg-O8y"/>
-                            <constraint firstItem="aTH-Cc-deO" firstAttribute="top" secondItem="OhC-6l-fgP" secondAttribute="bottom" id="qgF-v9-Ps8"/>
                             <constraint firstAttribute="bottom" secondItem="xXI-cb-kPY" secondAttribute="bottom" constant="15" id="sdD-Pd-0dm"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="startButton" destination="tHs-fI-LMQ" id="A6U-wt-aFb"/>
-                        <outlet property="titleLabel" destination="juc-Yj-TXM" id="TaG-Ks-aro"/>
                         <outlet property="versionLabel" destination="xXI-cb-kPY" id="DAZ-mT-vNR"/>
                     </connections>
                 </viewController>
@@ -121,16 +123,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oc9-Md-HW4" userLabel="personImageView">
-                                                <rect key="frame" x="60" y="198" width="200" height="320"/>
+                                                <rect key="frame" x="78" y="198" width="165" height="320"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="320" id="6sz-d8-FSb"/>
-                                                    <constraint firstAttribute="width" constant="200" id="I47-oQ-TpU"/>
+                                                    <constraint firstAttribute="width" constant="165" id="I47-oQ-TpU"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-DA-avD" userLabel="MenButton">
+                                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-DA-avD" userLabel="MenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
                                                 <rect key="frame" x="220" y="428" width="80" height="80"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.40392156862745099" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="B0U-6q-bPb"/>
                                                     <constraint firstAttribute="height" constant="80" id="vUJ-Tk-5L3"/>
@@ -139,13 +141,32 @@
                                                 <state key="normal" title="おっさん">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                        <real key="value" value="0.90000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                        <real key="value" value="0.90000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="manButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AqI-Nb-Goc"/>
+                                                    <action selector="menButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pul-m9-VMe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-xn-6Vs" userLabel="GalButton">
+                                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-xn-6Vs" userLabel="WomenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="428" width="80" height="80"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.92549019607843142" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="5U7-YC-MlY"/>
                                                     <constraint firstAttribute="height" constant="80" id="EXL-FW-opU"/>
@@ -155,17 +176,36 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                        <real key="value" value="0.90000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                        <real key="value" value="0.90000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="ladyButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qa1-Ap-Q2L"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-qK-qzy" userLabel="SetUpLabel">
                                                 <rect key="frame" x="160" y="178" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <size key="shadowOffset" width="-1" height="1"/>
+                                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -248,7 +288,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-SM-7Cl" userLabel="highScoreLabel">
-                                                <rect key="frame" x="129" y="154" width="63" height="29"/>
+                                                <rect key="frame" x="129" y="156" width="63" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -265,18 +305,28 @@
                                             <constraint firstAttribute="centerX" secondItem="eKf-qx-oe3" secondAttribute="centerX" id="qhR-6H-lfG"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-NV-RTi">
-                                        <rect key="frame" x="60" y="468" width="200" height="60"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-NV-RTi" userLabel="AgainButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="473" width="200" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="SoB-Qp-fzm"/>
+                                            <constraint firstAttribute="height" constant="50" id="SoB-Qp-fzm"/>
                                             <constraint firstAttribute="width" constant="200" id="evz-jc-fhu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="もう一度やる">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="DMU-ZJ-AH6"/>
                                         </connections>
@@ -288,10 +338,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUg-Y7-XET" userLabel="ShareButtonContainer">
-                                        <rect key="frame" x="0.0" y="358" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="373" width="320" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-NF-84J" userLabel="TwitterButton">
-                                                <rect key="frame" x="40" y="5" width="50" height="50"/>
+                                                <rect key="frame" x="40" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.33333333333333331" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="6n2-qM-tjY"/>
@@ -303,7 +353,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-si-DgX" userLabel="LineButton">
-                                                <rect key="frame" x="230" y="5" width="50" height="50"/>
+                                                <rect key="frame" x="230" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="XJd-h5-5sV"/>
@@ -362,7 +412,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="againButton" destination="hX8-NV-RTi" id="uMj-mG-bHJ"/>
+                        <outlet property="againButton" destination="hX8-NV-RTi" id="7s2-LF-mgH"/>
                         <outlet property="backgroundImageView" destination="cmn-Np-iDw" id="mJY-HF-cz8"/>
                         <outlet property="gameOverScoreLabel" destination="eKf-qx-oe3" id="gRH-Pd-RCK"/>
                         <outlet property="gameOverView" destination="8rG-TK-m3C" id="PT3-db-pw4"/>
@@ -371,13 +421,13 @@
                         <outlet property="judgeContainerView" destination="Hs9-Bj-ef5" id="G3P-ya-7kN"/>
                         <outlet property="judgeImageView" destination="ZZS-5Q-f1u" id="ZKK-Gg-BnJ"/>
                         <outlet property="line" destination="Wae-si-DgX" id="qng-ew-N5N"/>
-                        <outlet property="menButton" destination="1vS-DA-avD" id="JA4-GV-kYT"/>
+                        <outlet property="menButton" destination="1vS-DA-avD" id="twa-4t-R4J"/>
                         <outlet property="personImageView" destination="Oc9-Md-HW4" id="fGm-lL-Prw"/>
                         <outlet property="scoreLabel" destination="Xh6-z6-d0K" id="xo3-tB-8qW"/>
                         <outlet property="setUpLabel" destination="cQ9-qK-qzy" id="JLH-fe-4Ky"/>
                         <outlet property="timerLabel" destination="Ued-yM-JEg" id="L7a-o7-JW6"/>
                         <outlet property="twitter" destination="11e-NF-84J" id="gc7-B4-5Mv"/>
-                        <outlet property="womenButton" destination="xIa-xn-6Vs" id="Vt8-L7-cFf"/>
+                        <outlet property="womenButton" destination="xIa-xn-6Vs" id="3KS-wR-DsZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -386,7 +436,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background.png" width="640" height="1136"/>
+        <image name="backgroundTitle.png" width="640" height="1136"/>
         <image name="lineLogo" width="80" height="80"/>
         <image name="twitterLogo" width="843" height="843"/>
     </resources>
