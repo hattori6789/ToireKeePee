@@ -54,6 +54,8 @@
 		0279A24C1B79E88200CF916A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279A24B1B79E88200CF916A /* SoundManager.swift */; };
 		0286A6961B9580B200492BA4 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0286A6951B9580B200492BA4 /* hue.mp3 */; };
 		02A2E4AF1B95D20A0060BE32 /* men.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A2E4AE1B95D20A0060BE32 /* men.png */; };
+		02A5D0051BD4090D00F16453 /* menButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A5D0031BD4090D00F16453 /* menButton.png */; settings = {ASSET_TAGS = (); }; };
+		02A5D0061BD4090D00F16453 /* womenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A5D0041BD4090D00F16453 /* womenButton.png */; settings = {ASSET_TAGS = (); }; };
 		02A633EC1BAB1A1200295BFD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A633EB1BAB1A1200295BFD /* Social.framework */; };
 		02B283911BD2C037009E67B1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B283901BD2C037009E67B1 /* RGBExtention.swift */; settings = {ASSET_TAGS = (); }; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
@@ -122,6 +124,8 @@
 		0279A24B1B79E88200CF916A /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		0286A6951B9580B200492BA4 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		02A2E4AE1B95D20A0060BE32 /* men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = men.png; sourceTree = "<group>"; };
+		02A5D0031BD4090D00F16453 /* menButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menButton.png; sourceTree = "<group>"; };
+		02A5D0041BD4090D00F16453 /* womenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womenButton.png; sourceTree = "<group>"; };
 		02A633EB1BAB1A1200295BFD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		02B283901BD2C037009E67B1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				027117ED1BD2695300790A28 /* background.png */,
+				02A5D0031BD4090D00F16453 /* menButton.png */,
+				02A5D0041BD4090D00F16453 /* womenButton.png */,
 				025822D31BD26F5900FA86A6 /* backgroundTitle.png */,
 				02A2E4AE1B95D20A0060BE32 /* men.png */,
 				026ADB491BA037450051BE8F /* women.png */,
@@ -366,8 +372,10 @@
 				026ADB4A1BA037450051BE8F /* women.png in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
+				02A5D0061BD4090D00F16453 /* womenButton.png in Resources */,
 				02A2E4AF1B95D20A0060BE32 /* men.png in Resources */,
 				0268B5181B790DF10075252D /* batsu.png in Resources */,
+				02A5D0051BD4090D00F16453 /* menButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

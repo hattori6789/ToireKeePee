@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import Social
 
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var twitter: UIButton!
@@ -44,7 +43,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // 画面読み込み時はgameOverViewを非表示にする
         gameOverView.hidden = true
         
@@ -71,9 +70,6 @@ class ViewController: UIViewController {
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
         
-        // backGroundの表示
-        let backgroundImage = UIImage(named: "background.png")
-        backgroundImageView.image = backgroundImage
         
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
@@ -175,6 +171,7 @@ class ViewController: UIViewController {
     
     // 不正解時に呼び出される処理
     func falseAnswer() {
+        
         
         // タイマー処理の停止
         timer.invalidate()
@@ -290,6 +287,7 @@ class ViewController: UIViewController {
         
         
         if randomInt == 0 {
+
             // あとで消す　Button属性
             imageValueLabel.text = "おっさん"
             
@@ -328,7 +326,6 @@ class ViewController: UIViewController {
             
             
         } else {
-            
             // 不正解時の処理
             falseAnswer()
             

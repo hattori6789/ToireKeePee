@@ -97,7 +97,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCY-eK-16B" userLabel="BackgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-Np-iDw" userLabel="BackgroundImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-Np-iDw" userLabel="BackgroundImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -123,30 +123,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oc9-Md-HW4" userLabel="personImageView">
-                                                <rect key="frame" x="78" y="198" width="165" height="320"/>
+                                                <rect key="frame" x="52" y="98" width="216" height="420"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="320" id="6sz-d8-FSb"/>
-                                                    <constraint firstAttribute="width" constant="165" id="I47-oQ-TpU"/>
+                                                    <constraint firstAttribute="height" constant="420" id="6sz-d8-FSb"/>
+                                                    <constraint firstAttribute="width" constant="216" id="I47-oQ-TpU"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="FadeInRight"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-DA-avD" userLabel="MenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
-                                                <rect key="frame" x="220" y="428" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.23137254901960785" green="0.40392156862745099" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-DA-avD" userLabel="MenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="453" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="B0U-6q-bPb"/>
-                                                    <constraint firstAttribute="height" constant="80" id="vUJ-Tk-5L3"/>
+                                                    <constraint firstAttribute="width" constant="90" id="B0U-6q-bPb"/>
+                                                    <constraint firstAttribute="height" constant="90" id="vUJ-Tk-5L3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="おっさん">
+                                                <state key="normal" image="menButton.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="40"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -159,20 +156,22 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
                                                         <real key="value" value="0.90000000000000002"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="menButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pul-m9-VMe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-xn-6Vs" userLabel="WomenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="428" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.92549019607843142" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-xn-6Vs" userLabel="WomenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="453" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="5U7-YC-MlY"/>
-                                                    <constraint firstAttribute="height" constant="80" id="EXL-FW-opU"/>
+                                                    <constraint firstAttribute="width" constant="90" id="5U7-YC-MlY"/>
+                                                    <constraint firstAttribute="height" constant="90" id="EXL-FW-opU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="ぎゃる">
+                                                <state key="normal" image="womenButton.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -180,7 +179,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="40"/>
+                                                        <real key="value" value="45"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
@@ -200,7 +199,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-qK-qzy" userLabel="SetUpLabel">
-                                                <rect key="frame" x="160" y="178" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="160" y="128" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -217,11 +216,11 @@
                                             <constraint firstAttribute="trailing" secondItem="1vS-DA-avD" secondAttribute="trailing" constant="20" id="7Po-Tg-AeG"/>
                                             <constraint firstItem="Ued-yM-JEg" firstAttribute="top" secondItem="rhg-79-gsx" secondAttribute="top" constant="20" id="9AO-uZ-5Jd"/>
                                             <constraint firstItem="Oc9-Md-HW4" firstAttribute="centerX" secondItem="rhg-79-gsx" secondAttribute="centerX" id="Goz-bN-Pw6"/>
-                                            <constraint firstAttribute="bottom" secondItem="1vS-DA-avD" secondAttribute="bottom" constant="60" id="bg5-zP-Khx"/>
+                                            <constraint firstAttribute="bottom" secondItem="1vS-DA-avD" secondAttribute="bottom" constant="25" id="bg5-zP-Khx"/>
                                             <constraint firstAttribute="trailing" secondItem="Xh6-z6-d0K" secondAttribute="trailing" constant="20" id="bg8-9j-3Kz"/>
                                             <constraint firstItem="xIa-xn-6Vs" firstAttribute="leading" secondItem="rhg-79-gsx" secondAttribute="leading" constant="20" id="d4C-cs-qhn"/>
                                             <constraint firstItem="xIa-xn-6Vs" firstAttribute="centerY" secondItem="1vS-DA-avD" secondAttribute="centerY" id="l9e-Vg-2JA"/>
-                                            <constraint firstItem="Oc9-Md-HW4" firstAttribute="top" secondItem="cQ9-qK-qzy" secondAttribute="bottom" constant="20" id="utn-Zr-DkT"/>
+                                            <constraint firstItem="Oc9-Md-HW4" firstAttribute="top" secondItem="cQ9-qK-qzy" secondAttribute="bottom" constant="-30" id="utn-Zr-DkT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -436,9 +435,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background.png" width="640" height="1136"/>
         <image name="backgroundTitle.png" width="640" height="1136"/>
         <image name="lineLogo" width="80" height="80"/>
+        <image name="menButton.png" width="197" height="197"/>
         <image name="twitterLogo" width="843" height="843"/>
+        <image name="womenButton.png" width="197" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Fo-1E-Ko0"/>
