@@ -97,7 +97,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCY-eK-16B" userLabel="BackgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-Np-iDw" userLabel="BackgroundImageView">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-Np-iDw" userLabel="BackgroundImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -129,9 +129,6 @@
                                                     <constraint firstAttribute="height" constant="410" id="6sz-d8-FSb"/>
                                                     <constraint firstAttribute="width" constant="211" id="I47-oQ-TpU"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="FadeInRight"/>
-                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-DA-avD" userLabel="MenButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
                                                 <rect key="frame" x="206" y="454" width="98" height="98"/>
@@ -241,7 +238,7 @@
                             <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hs9-Bj-ef5" userLabel="JudgeContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-5Q-f1u" userLabel="JudgeImageView">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-5Q-f1u" userLabel="JudgeImageView">
                                         <rect key="frame" x="60" y="184" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="4PI-KB-TZv"/>
@@ -369,6 +366,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="DMU-ZJ-AH6"/>
@@ -412,7 +410,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="againButton" destination="hX8-NV-RTi" id="7s2-LF-mgH"/>
-                        <outlet property="backgroundImageView" destination="cmn-Np-iDw" id="mJY-HF-cz8"/>
                         <outlet property="gameOverScoreLabel" destination="eKf-qx-oe3" id="gRH-Pd-RCK"/>
                         <outlet property="gameOverView" destination="8rG-TK-m3C" id="PT3-db-pw4"/>
                         <outlet property="highScoreLabel" destination="WQ9-SM-7Cl" id="pfv-LD-nkr"/>

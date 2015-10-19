@@ -16,7 +16,7 @@ class StartViewController: UIViewController {
     @IBOutlet weak var versionLabel: UILabel!
     ///////////////////////////////////
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var startButton: DesignableButton!
     
     // 音楽再生の引数を定義
     var player: AVAudioPlayer?

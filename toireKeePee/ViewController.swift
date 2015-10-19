@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var judgeImageView: UIImageView!
     @IBOutlet weak var imageValueLabel: UILabel!
     @IBOutlet weak var personImageView: UIImageView!
-    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -310,12 +309,6 @@ class ViewController: UIViewController {
         }
     }
     
-    // ゲームオーバー画面を表示する
-    func addGameOrverView() {
-    }
-    
-    
-    
     @IBAction func menButtonTapped(sender: DesignableButton) {
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "おっさん" {
@@ -330,7 +323,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func ladyButtonTapped(sender: AnyObject) {
+    @IBAction func ladyButtonTapped(sender: DesignableButton) {
         
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "ぎゃる" {
