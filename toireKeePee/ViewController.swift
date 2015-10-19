@@ -323,12 +323,9 @@ class ViewController: UIViewController {
             trueAnswer()
             // Scoreを更新
             addScore()
-            
-            
         } else {
             // 不正解時の処理
             falseAnswer()
-            
         }
         
     }
@@ -341,12 +338,10 @@ class ViewController: UIViewController {
             trueAnswer()
             // Scoreを更新
             addScore()
-            
         } else {
             
             // 不正解時の処理
             falseAnswer()
-            
         }
     }
     
@@ -356,14 +351,12 @@ class ViewController: UIViewController {
         
         // imageValueをランダムに更新する処理
         randomPersonImageView()
-        
     }
     
     func share(type: String) {
         let vc = SLComposeViewController(forServiceType: type)
         vc.setInitialText("[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n")
         self.presentViewController(vc, animated: true, completion: nil)
-        
     }
     
     @IBAction func twitterTapped(sender: AnyObject) {
