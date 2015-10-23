@@ -12,6 +12,7 @@ import Social
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var judgeButton: UIButton!
     @IBOutlet weak var twitter: UIButton!
     @IBOutlet weak var line: UIButton!
     @IBOutlet weak var setUpLabel: UILabel!
@@ -42,33 +43,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // 画面読み込み時はgameOverViewを非表示にする
         gameOverView.hidden = true
         
-        // againButtonの設定
-        // springライブラリ、attributeインスペクターで対応
-        // againButton.layer.cornerRadius = 10.0
-        // againButton.layer.borderColor = UIColor.darkGrayColor().CGColor
-        // againButton.layer.borderWidth = 3
-        
-        // menButtonの設定
-        // springライブラリ、attributeインスペクターで対応
-        // menButton.layer.masksToBounds = true
-        // menButton.layer.cornerRadius = 40.0
-        // menButton.layer.borderColor = UIColor.rgb(r: 52, g: 98, b: 175, alpha: 1.0).CGColor
-        // menButton.layer.borderWidth = 3
-        
-        // womenButtonの設定
-        // springライブラリ、attributeインスペクターで対応
-        // womenButton.layer.masksToBounds = true
-        // womenButton.layer.cornerRadius = 40.0
-        // womenButton.layer.borderColor = UIColor.rgb(r: 236, g: 151, b: 151, alpha: 1.0).CGColor
-        // womenButton.layer.borderWidth = 3
-        
         // judgeContainerViewを非表示にする
         judgeContainerView.hidden = true
-        
         
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
@@ -78,13 +58,14 @@ class ViewController: UIViewController {
         // randomTextの表示
         randomPersonImageView()
         
-        // Twitter,　Lineが利用可能状態か確認
+        // TwitterとLineが利用可能状態か確認
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "line://")!) {
             line.enabled = true
         }
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             twitter.enabled = true
         }
+
         
     }
     
@@ -131,7 +112,7 @@ class ViewController: UIViewController {
             // タッチイベントを無効にする処理
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
         }
-    }
+    }   
     
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド
     func countDown(timer : NSTimer) {
@@ -171,33 +152,37 @@ class ViewController: UIViewController {
     // 不正解時に呼び出される処理
     func falseAnswer() {
         
-        
         // タイマー処理の停止
         timer.invalidate()
         
+        //judgeButtonを無効化
+        judgeButton.enabled = false
+        
         // menButtonを非表示
+        menButton.enabled = false
         menButton.hidden = true
         
         // womenButtonを非表示
+        womenButton.enabled = false
         womenButton.hidden = true
-        
-        // judgiContainerViewを表示
-        judgeContainerView.hidden = false
-        
-        // judgeImageViewにbatsu.pngを表示する
-        let judgeImage = UIImage(named: "batsu.png")
-        
-        // judgeImageViewを代入
-        judgeImageView.image = judgeImage
         
         // batsuサウンドを鳴らす
         soundManager.sePlay("batsu.mp3")
         
-        // gameOverViewを表示
-        gameOverView.hidden = false
+        // 一時停止後にgameOverViewを表示
+        pouseGameOverView()
         
         // gameOverScoreLabelにスコアを代入
         gameOverScoreLabel.text = String(score)
+
+        // judgeContainerViewを表示
+        judgeContainerView.hidden = false
+        
+        // judgeImageViewにbatsu.pngを表示する
+        let judgeImage = UIImage(named: "batsu.png")
+
+        // judgeImageViewを代入
+        judgeImageView.image = judgeImage
         
         addHighScore()
         
@@ -209,9 +194,6 @@ class ViewController: UIViewController {
     
     func timeUp() {
         
-        // gameOverViewを表示
-        gameOverView.hidden = false
-        
         // timerLabelを0表示する
         self.timerLabel.text = "Time: 0.0"
         
@@ -221,11 +203,19 @@ class ViewController: UIViewController {
         // 終了の笛の音を鳴らす
         soundManager.sePlay("hue.mp3")
         
+        //judgeButtonを無効化
+        judgeButton.enabled = false
+        
         // menButtonを非表示
+        menButton.enabled = false
         menButton.hidden = true
         
         // womenButtonを非表示
+        womenButton.enabled = false
         womenButton.hidden = true
+        
+        // 一時停止後にgameOverViewを表示
+        pouseGameOverView()
         
         // gameOverScoreLabelにスコアを代入
         gameOverScoreLabel.text = String(score)
@@ -233,7 +223,7 @@ class ViewController: UIViewController {
         addHighScore()
         
         resultHighScore()
-        
+    
     }
     
     
@@ -323,6 +313,17 @@ class ViewController: UIViewController {
         
     }
     
+    func pouseGameOverView() {
+        
+        let delay = 0.7 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.gameOverView.hidden = false
+        })
+
+    }
+    
+    
     @IBAction func ladyButtonTapped(sender: DesignableButton) {
         
         // imageValueが、属性ラベルと一致していたら
@@ -357,7 +358,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lineTapped(sender: AnyObject) {
-        let message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n"
+        let message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:XXXXX\n"
         if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
             if let uri = NSURL(string: "line://msg/text/" + encoded) {
                 UIApplication.sharedApplication().openURL(uri)

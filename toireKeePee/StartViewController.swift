@@ -10,12 +10,13 @@ import UIKit
 import AVFoundation
 
 class StartViewController: UIViewController {
-    
+
     
     // リリース前に消す？　versionLabel関連
     @IBOutlet weak var versionLabel: UILabel!
     ///////////////////////////////////
     
+    @IBOutlet weak var logoImageView: DesignableImageView!
     @IBOutlet weak var startButton: DesignableButton!
     
     // 音楽再生の引数を定義
@@ -27,30 +28,42 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// リリース前に消す？　versionLabel関連 ///
-        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
-        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
-        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
-        //////////////////////////////////////
-        
-        // スタートボタンの設定
-        // springライブラリ、attributeインスペクターで対応
-        // startButton.layer.masksToBounds = true
-        // startButton.layer.cornerRadius = 10.0
-        // startButton.layer.borderWidth = 3
+        // Animationのスタート
+        titleLogoAnimation()
         
         // BGMの再生
         soundManager.bgmPlay("BGM.mp3")
         
+        /// リリース前に消す？　versionLabel関連 ///
+        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
+        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
+        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
     }
+    
+    func titleLogoAnimation() {
+        // logo.pngのアニメーション
+        logoImageView.delay = 2.2
+        logoImageView.duration = 1.0
+        logoImageView.animation = "fadeInDown"
+        logoImageView.animateNext { () -> () in
+            self.logoImageView.animation = "pop"
+            self.logoImageView.animate()
+        }
+    }
+    
+    // 時点での時間を表示
+    func printTime(name: String) {
+        let now = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH時mm分ss.SSS秒"
+        let string = formatter.stringFromDate(now)
+        print(string + " \(name)が呼ばれた")
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func startButtonTapped(sender: DesignableButton) {
-        sender.animate()
-    }
     
 }
