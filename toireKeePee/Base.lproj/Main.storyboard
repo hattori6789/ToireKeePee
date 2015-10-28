@@ -315,30 +315,39 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUg-Y7-XET" userLabel="ShareButtonContainer">
-                                        <rect key="frame" x="0.0" y="373" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="403" width="320" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-NF-84J" userLabel="TwitterButton">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-NF-84J" userLabel="TwitterButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="0.33333333333333331" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="6n2-qM-tjY"/>
                                                     <constraint firstAttribute="height" constant="50" id="j4r-NO-xZs"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="twitterLogo"/>
+                                                <state key="normal" backgroundImage="TwitterLogo_#55acee.png"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="twitterTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bdt-UB-40c"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-si-DgX" userLabel="LineButton">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-si-DgX" userLabel="LineButton" customClass="DesignableButton" customModule="toireKeePee" customModuleProvider="target">
                                                 <rect key="frame" x="230" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="XJd-h5-5sV"/>
                                                     <constraint firstAttribute="width" constant="50" id="mPD-ZQ-apy"/>
                                                 </constraints>
-                                                <state key="normal" image="lineLogo">
+                                                <state key="normal" backgroundImage="LINE_icon_Green.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="lineTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bi3-dM-xs9"/>
                                                 </connections>
@@ -391,7 +400,7 @@
                                     <constraint firstAttribute="centerX" secondItem="hX8-NV-RTi" secondAttribute="centerX" id="QSt-1N-t7m"/>
                                     <constraint firstAttribute="centerX" secondItem="cfN-48-uNO" secondAttribute="centerX" id="W9f-Yf-1BJ"/>
                                     <constraint firstAttribute="centerY" secondItem="XJA-9e-TI4" secondAttribute="centerY" multiplier="1.4" id="XgM-7s-84O"/>
-                                    <constraint firstItem="hX8-NV-RTi" firstAttribute="top" secondItem="uUg-Y7-XET" secondAttribute="bottom" constant="50" id="foA-OJ-Mb9"/>
+                                    <constraint firstItem="hX8-NV-RTi" firstAttribute="top" secondItem="uUg-Y7-XET" secondAttribute="bottom" constant="20" id="foA-OJ-Mb9"/>
                                     <constraint firstItem="uUg-Y7-XET" firstAttribute="leading" secondItem="8rG-TK-m3C" secondAttribute="leading" id="gEE-Wj-tpz"/>
                                     <constraint firstAttribute="width" secondItem="XJA-9e-TI4" secondAttribute="width" id="xiD-rF-YCb"/>
                                 </constraints>
@@ -430,7 +439,7 @@
                         <outlet property="scoreLabel" destination="Xh6-z6-d0K" id="xo3-tB-8qW"/>
                         <outlet property="setUpLabel" destination="cQ9-qK-qzy" id="JLH-fe-4Ky"/>
                         <outlet property="timerLabel" destination="Ued-yM-JEg" id="L7a-o7-JW6"/>
-                        <outlet property="twitter" destination="11e-NF-84J" id="gc7-B4-5Mv"/>
+                        <outlet property="twitter" destination="11e-NF-84J" id="GiV-vL-XhT"/>
                         <outlet property="womenButton" destination="xIa-xn-6Vs" id="3KS-wR-DsZ"/>
                     </connections>
                 </viewController>
@@ -440,12 +449,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LINE_icon_Green.png" width="256" height="252"/>
+        <image name="TwitterLogo_#55acee.png" width="1687" height="1687"/>
         <image name="background.png" width="640" height="1136"/>
         <image name="backgroundTitle.png" width="640" height="1136"/>
-        <image name="lineLogo" width="80" height="80"/>
         <image name="logo.png" width="617" height="321"/>
         <image name="menButton.png" width="197" height="197"/>
-        <image name="twitterLogo" width="843" height="843"/>
         <image name="womenButton.png" width="197" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>

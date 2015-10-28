@@ -13,8 +13,8 @@ import Social
 class ViewController: UIViewController {
     
     @IBOutlet weak var judgeButton: UIButton!
-    @IBOutlet weak var twitter: UIButton!
-    @IBOutlet weak var line: UIButton!
+    @IBOutlet weak var twitter: DesignableButton!
+    @IBOutlet weak var line: DesignableButton!
     @IBOutlet weak var setUpLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
