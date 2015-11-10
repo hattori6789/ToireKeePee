@@ -42,7 +42,7 @@ class StartViewController: UIViewController {
     
     func titleLogoAnimation() {
         // logo.pngのアニメーション
-        logoImageView.delay = 2.2
+        logoImageView.delay = 2.0
         logoImageView.duration = 1.0
         logoImageView.animation = "fadeInDown"
         logoImageView.animateNext { () -> () in
