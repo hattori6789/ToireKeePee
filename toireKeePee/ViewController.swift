@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
         timerLabel.textAlignment = NSTextAlignment.Left
-        timerLabel.text = "TIME: is READY"
+        timerLabel.text = "TIME: READY"
         
         // randomTextの表示
         randomPersonImageView()
@@ -372,4 +372,7 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func backTitleButtonTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
