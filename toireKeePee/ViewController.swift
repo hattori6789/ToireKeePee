@@ -372,7 +372,4 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func backTitleButtonTapped(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
 }
