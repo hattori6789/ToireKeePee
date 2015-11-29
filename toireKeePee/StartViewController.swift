@@ -2,7 +2,7 @@
 //  StartViewController.swift
 //  toireKeePee
 //
-//  Created by hattori on 2015/08/31.
+//  Created by hattori
 //  Copyright (c) 2015年 hattori. All rights reserved.
 //
 
@@ -23,13 +23,16 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // NavigationBarを非表示
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         // Animationのスタート
         titleLogoAnimation()
         
         // BGMの再生
         soundManager.bgmPlay("BGM.mp3")
         
-//        //リリース前に消す？　versionLabel関連
+//        //リリース前に消す　versionLabel関連
 //        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
 //        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
 //        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
