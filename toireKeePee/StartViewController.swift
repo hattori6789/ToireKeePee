@@ -20,23 +20,20 @@ class StartViewController: UIViewController {
     // SoundManagerクラスを実体化
     var soundManager = SoundManager()
     
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // NavigationBarを非表示
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        
+
         // Animationのスタート
         titleLogoAnimation()
         
         // BGMの再生
         soundManager.bgmPlay("BGM.mp3")
         
-//        //リリース前に消す　versionLabel関連
-//        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
-//        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
-//        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
-    
     }
     
     func titleLogoAnimation() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020659541C0B03AA00A9DB8D /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020659531C0B03AA00A9DB8D /* LicenseDetailViewController.swift */; };
 		020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CF91B8BDEB200263781 /* BGM.mp3 */; };
 		0222B5FB1BD935170054A1A2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0222B5FA1BD935170054A1A2 /* background.png */; };
 		023311E91B966BA4002B46CA /* munku.png in Resources */ = {isa = PBXBuildFile; fileRef = 023311E81B966BA4002B46CA /* munku.png */; };
@@ -58,7 +59,11 @@
 		02B283911BD2C037009E67B1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B283901BD2C037009E67B1 /* RGBExtention.swift */; };
 		02BEEABE1BE03C4C00E6E3D7 /* LINE_icon_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */; };
 		02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */; };
+		02D2CA811C0AEAA100E9B082 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D2CA801C0AEAA100E9B082 /* AboutViewController.swift */; };
+		02D2CA831C0AF6ED00E9B082 /* Licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02D2CA821C0AF6ED00E9B082 /* Licenses.plist */; };
+		02D2CA851C0AF86100E9B082 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D2CA841C0AF86100E9B082 /* LicenseListViewController.swift */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
+		02FF62621C0CCF0300735CB0 /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF62611C0CCF0300735CB0 /* AboutTableViewCell.swift */; };
 		BB06AF4A1BF1E49F00A7DEE1 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */; };
 		BB0F47821BEA048C00F30A8B /* backgroundTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0F47811BEA048C00F30A8B /* backgroundTitle.png */; };
 		BB76664B1BF0E65800679E43 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7666491BF0E65800679E43 /* batsu.mp3 */; };
@@ -77,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020659531C0B03AA00A9DB8D /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		020A3CF91B8BDEB200263781 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
 		0222B5FA1BD935170054A1A2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		023311E81B966BA4002B46CA /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
@@ -133,7 +139,11 @@
 		02B283901BD2C037009E67B1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
 		02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LINE_icon_Green.png; sourceTree = "<group>"; };
 		02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterLogo_#55acee.png"; sourceTree = "<group>"; };
+		02D2CA801C0AEAA100E9B082 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		02D2CA821C0AF6ED00E9B082 /* Licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licenses.plist; sourceTree = "<group>"; };
+		02D2CA841C0AF86100E9B082 /* LicenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		02FF62611C0CCF0300735CB0 /* AboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		BB0F47811BEA048C00F30A8B /* backgroundTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitle.png; sourceTree = "<group>"; };
 		BB7666491BF0E65800679E43 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
@@ -160,6 +170,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0266277E1C0CBE05008F6EF0 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				02D2CA801C0AEAA100E9B082 /* AboutViewController.swift */,
+				02FF62611C0CCF0300735CB0 /* AboutTableViewCell.swift */,
+				02D2CA841C0AF86100E9B082 /* LicenseListViewController.swift */,
+				020659531C0B03AA00A9DB8D /* LicenseDetailViewController.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 		0268B4DF1B790CE00075252D = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +203,7 @@
 		0268B4EA1B790CE00075252D /* toireKeePee */ = {
 			isa = PBXGroup;
 			children = (
+				0266277E1C0CBE05008F6EF0 /* About */,
 				0268B4ED1B790CE00075252D /* AppDelegate.swift */,
 				02B283901BD2C037009E67B1 /* RGBExtention.swift */,
 				0279A24B1B79E88200CF916A /* SoundManager.swift */,
@@ -202,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				0268B4EC1B790CE00075252D /* Info.plist */,
+				02D2CA821C0AF6ED00E9B082 /* Licenses.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -376,6 +399,7 @@
 			files = (
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
 				0222B5FB1BD935170054A1A2 /* background.png in Resources */,
+				02D2CA831C0AF6ED00E9B082 /* Licenses.plist in Resources */,
 				023311E91B966BA4002B46CA /* munku.png in Resources */,
 				BB0F47821BEA048C00F30A8B /* backgroundTitle.png in Resources */,
 				020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */,
@@ -423,6 +447,7 @@
 				028BC1201BDDFD2600EE6387 /* TransitionManager.swift in Sources */,
 				028BC1191BDDFD2600EE6387 /* SpringAnimation.swift in Sources */,
 				028BC1061BDDFD2600EE6387 /* AsyncButton.swift in Sources */,
+				020659541C0B03AA00A9DB8D /* LicenseDetailViewController.swift in Sources */,
 				028BC1131BDDFD2600EE6387 /* KeyboardLayoutConstraint.swift in Sources */,
 				028BC10A1BDDFD2600EE6387 /* DesignableButton.swift in Sources */,
 				02B283911BD2C037009E67B1 /* RGBExtention.swift in Sources */,
@@ -432,12 +457,15 @@
 				028BC1091BDDFD2600EE6387 /* BlurView.swift in Sources */,
 				0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */,
 				028BC1111BDDFD2600EE6387 /* ImageLoader.swift in Sources */,
+				02D2CA851C0AF86100E9B082 /* LicenseListViewController.swift in Sources */,
 				028BC11F1BDDFD2600EE6387 /* SpringView.swift in Sources */,
+				02FF62621C0CCF0300735CB0 /* AboutTableViewCell.swift in Sources */,
 				028BC11C1BDDFD2600EE6387 /* SpringLabel.swift in Sources */,
 				028BC1161BDDFD2600EE6387 /* Misc.swift in Sources */,
 				028BC10D1BDDFD2600EE6387 /* DesignableTabBarController.swift in Sources */,
 				028BC1081BDDFD2600EE6387 /* AutoTextView.swift in Sources */,
 				028BC10F1BDDFD2600EE6387 /* DesignableTextView.swift in Sources */,
+				02D2CA811C0AEAA100E9B082 /* AboutViewController.swift in Sources */,
 				028BC1181BDDFD2600EE6387 /* Spring.swift in Sources */,
 				028BC11A1BDDFD2600EE6387 /* SpringButton.swift in Sources */,
 				028BC1221BDDFD2600EE6387 /* UnwindSegue.swift in Sources */,
