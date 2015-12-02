@@ -47,16 +47,6 @@ class StartViewController: UIViewController {
         }
     }
     
-    // 時点での時間を表示
-    func printTime(name: String) {
-        let now = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "HH時mm分ss.SSS秒"
-        let string = formatter.stringFromDate(now)
-        print(string + " \(name)が呼ばれた")
-    }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
