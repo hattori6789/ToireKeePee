@@ -2,7 +2,7 @@
 //  StartViewController.swift
 //  toireKeePee
 //
-//  Created by hattori on 2015/08/31.
+//  Created by hattori
 //  Copyright (c) 2015年 hattori. All rights reserved.
 //
 
@@ -20,6 +20,11 @@ class StartViewController: UIViewController {
     // SoundManagerクラスを実体化
     var soundManager = SoundManager()
     
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,11 +34,6 @@ class StartViewController: UIViewController {
         // BGMの再生
         soundManager.bgmPlay("BGM.mp3")
         
-//        //リリース前に消す？　versionLabel関連
-//        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
-//        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
-//        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
-    
     }
     
     func titleLogoAnimation() {
@@ -46,16 +46,6 @@ class StartViewController: UIViewController {
             self.logoImageView.animate()
         }
     }
-    
-    // 時点での時間を表示
-    func printTime(name: String) {
-        let now = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "HH時mm分ss.SSS秒"
-        let string = formatter.stringFromDate(now)
-        print(string + " \(name)が呼ばれた")
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
