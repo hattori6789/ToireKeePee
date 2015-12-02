@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CF91B8BDEB200263781 /* BGM.mp3 */; };
-		020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFB1B8BE04300263781 /* maru.mp3 */; };
-		020A3CFE1B8BE04300263781 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CFC1B8BE04300263781 /* batsu.mp3 */; };
-		0222B5F91BD9335F0054A1A2 /* backgroundTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0222B5F81BD9335F0054A1A2 /* backgroundTitle.png */; };
 		0222B5FB1BD935170054A1A2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0222B5FA1BD935170054A1A2 /* background.png */; };
 		023311E91B966BA4002B46CA /* munku.png in Resources */ = {isa = PBXBuildFile; fileRef = 023311E81B966BA4002B46CA /* munku.png */; };
 		0245FCDF1BD5C3FF00B6844C /* backgroundTitleORG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */; };
@@ -34,6 +31,11 @@
 		02BEEABE1BE03C4C00E6E3D7 /* LINE_icon_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */; };
 		02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
+		BB06AF4A1BF1E49F00A7DEE1 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */; };
+		BB0F47821BEA048C00F30A8B /* backgroundTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0F47811BEA048C00F30A8B /* backgroundTitle.png */; };
+		BB76664B1BF0E65800679E43 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7666491BF0E65800679E43 /* batsu.mp3 */; };
+		BB76664D1BF0E92F00679E43 /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB76664C1BF0E92F00679E43 /* maru.mp3 */; };
+		BB97A0571BEA0BE800FB2E4D /* backgroundTitle01.png in Resources */ = {isa = PBXBuildFile; fileRef = BB97A0561BEA0BE800FB2E4D /* backgroundTitle01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +50,6 @@
 
 /* Begin PBXFileReference section */
 		020A3CF91B8BDEB200263781 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
-		020A3CFB1B8BE04300263781 /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
-		020A3CFC1B8BE04300263781 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
-		0222B5F81BD9335F0054A1A2 /* backgroundTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitle.png; sourceTree = "<group>"; };
 		0222B5FA1BD935170054A1A2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		023311E81B966BA4002B46CA /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
 		0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitleORG.png; sourceTree = "<group>"; };
@@ -78,6 +77,11 @@
 		02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LINE_icon_Green.png; sourceTree = "<group>"; };
 		02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterLogo_#55acee.png"; sourceTree = "<group>"; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
+		BB0F47811BEA048C00F30A8B /* backgroundTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitle.png; sourceTree = "<group>"; };
+		BB7666491BF0E65800679E43 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
+		BB76664C1BF0E92F00679E43 /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
+		BB97A0561BEA0BE800FB2E4D /* backgroundTitle01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitle01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */,
+				BB97A0561BEA0BE800FB2E4D /* backgroundTitle01.png */,
 				02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */,
 				02A5D0031BD4090D00F16453 /* menButton.png */,
-				0222B5F81BD9335F0054A1A2 /* backgroundTitle.png */,
+				BB0F47811BEA048C00F30A8B /* backgroundTitle.png */,
 				0222B5FA1BD935170054A1A2 /* background.png */,
 				0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */,
 				0245FCE01BD5C44D00B6844C /* logo.png */,
@@ -184,10 +189,10 @@
 		0279A24D1B79ED1B00CF916A /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				BB7666491BF0E65800679E43 /* batsu.mp3 */,
+				BB76664C1BF0E92F00679E43 /* maru.mp3 */,
 				020A3CF91B8BDEB200263781 /* BGM.mp3 */,
-				020A3CFB1B8BE04300263781 /* maru.mp3 */,
-				020A3CFC1B8BE04300263781 /* batsu.mp3 */,
-				0286A6951B9580B200492BA4 /* hue.mp3 */,
+				BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -277,22 +282,24 @@
 				0268B4F31B790CE00075252D /* Main.storyboard in Resources */,
 				0222B5FB1BD935170054A1A2 /* background.png in Resources */,
 				023311E91B966BA4002B46CA /* munku.png in Resources */,
-				020A3CFD1B8BE04300263781 /* maru.mp3 in Resources */,
+				BB0F47821BEA048C00F30A8B /* backgroundTitle.png in Resources */,
 				020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */,
+				BB76664D1BF0E92F00679E43 /* maru.mp3 in Resources */,
 				02BEEABE1BE03C4C00E6E3D7 /* LINE_icon_Green.png in Resources */,
-				0286A6961B9580B200492BA4 /* hue.mp3 in Resources */,
 				0268B51B1B790DF10075252D /* maru.png in Resources */,
 				02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */,
+				BB97A0571BEA0BE800FB2E4D /* backgroundTitle01.png in Resources */,
 				0245FCDF1BD5C3FF00B6844C /* backgroundTitleORG.png in Resources */,
 				020A3CFE1B8BE04300263781 /* batsu.mp3 in Resources */,
 				026ADB4A1BA037450051BE8F /* women.png in Resources */,
 				0245FCE11BD5C44D00B6844C /* logo.png in Resources */,
 				028C77CE1BE04A3200DBDEE9 /* batsu.png in Resources */,
+				BB06AF4A1BF1E49F00A7DEE1 /* hue.mp3 in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
 				02A5D0061BD4090D00F16453 /* womenButton.png in Resources */,
+				BB76664B1BF0E65800679E43 /* batsu.mp3 in Resources */,
 				02A2E4AF1B95D20A0060BE32 /* men.png in Resources */,
-				0222B5F91BD9335F0054A1A2 /* backgroundTitle.png in Resources */,
 				02A5D0051BD4090D00F16453 /* menButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,8 +381,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -400,6 +407,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -420,12 +428,13 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -436,6 +445,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -446,10 +456,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = toireKeePee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garagudegoragu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -457,11 +470,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: dara-gu degora-ku (6E7NXP7GJM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = toireKeePee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garagudegoragu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -476,7 +492,7 @@
 				);
 				INFOPLIST_FILE = toireKeePeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garagudegoragu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/toireKeePee.app/toireKeePee";
 			};
@@ -489,7 +505,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = toireKeePeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garagudegoragu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/toireKeePee.app/toireKeePee";
 			};

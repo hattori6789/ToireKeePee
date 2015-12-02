@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
         timerLabel.textAlignment = NSTextAlignment.Left
-        timerLabel.text = "Time: 停止"
+        timerLabel.text = "TIME: READY"
         
         // randomTextの表示
         randomPersonImageView()
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
                     self.setUpLabel.text = "どん！！"
                 })
                 // Timerの表示
-                self.timerLabel.text = "Time: \(self.cnt)"
+                self.timerLabel.text = "TIME: \(self.cnt)"
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
                 
         })
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
         cnt -= 0.1
         
         // 桁数を指定して文字列を作り、timerLabelに表示する
-        let str = "Time: ".stringByAppendingFormat("%.1f",cnt)
+        let str = "TIME: ".stringByAppendingFormat("%.1f",cnt)
         timerLabel.text = str
         
         // cntが0になった時の処理
@@ -195,7 +195,7 @@ class ViewController: UIViewController {
     func timeUp() {
         
         // timerLabelを0表示する
-        self.timerLabel.text = "Time: 0.0"
+        self.timerLabel.text = "TIME: 0.0"
         
         // タイマー処理の停止
         timer.invalidate()
@@ -244,10 +244,10 @@ class ViewController: UIViewController {
         let ud = NSUserDefaults.standardUserDefaults()
         let rappedHighScore = ud.objectForKey("udScore") as? Int
         if rappedHighScore == nil {
-            highScoreLabel.text = "ハイスコア: 0"
+            highScoreLabel.text = "HIGH SCORE: 0"
         } else {
             if let highScore = rappedHighScore {
-                highScoreLabel.text = "ハイスコア: \(highScore)"
+                highScoreLabel.text = "HIGH SCORE: \(highScore)"
             }
         }
         
@@ -349,9 +349,14 @@ class ViewController: UIViewController {
     
     func share(type: String) {
         let vc = SLComposeViewController(forServiceType: type)
-        vc.setInitialText("[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n")
+        let text = "[駆け込め！トイレ運動会]\nスコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\n"
+        let url = "url.com"
+        vc.setInitialText(text)
+        vc.addURL(NSURL(string: url))
         self.presentViewController(vc, animated: true, completion: nil)
     }
+    
+    
     
     @IBAction func twitterTapped(sender: AnyObject) {
         share(SLServiceTypeTwitter)
@@ -360,8 +365,8 @@ class ViewController: UIViewController {
     @IBAction func lineTapped(sender: AnyObject) {
         let message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:XXXXX\n"
         if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
-            if let uri = NSURL(string: "line://msg/text/" + encoded) {
-                UIApplication.sharedApplication().openURL(uri)
+            if let url = NSURL(string: "line://msg/text/" + encoded) {
+                UIApplication.sharedApplication().openURL(url)
             }
         }
         

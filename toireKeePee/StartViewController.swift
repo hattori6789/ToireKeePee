@@ -11,11 +11,6 @@ import AVFoundation
 
 class StartViewController: UIViewController {
 
-    
-    // リリース前に消す？　versionLabel関連
-    @IBOutlet weak var versionLabel: UILabel!
-    ///////////////////////////////////
-    
     @IBOutlet weak var logoImageView: DesignableImageView!
     @IBOutlet weak var startButton: DesignableButton!
     
@@ -34,15 +29,16 @@ class StartViewController: UIViewController {
         // BGMの再生
         soundManager.bgmPlay("BGM.mp3")
         
-        /// リリース前に消す？　versionLabel関連 ///
-        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
-        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
-        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
+//        //リリース前に消す？　versionLabel関連
+//        let infoDictionary = NSBundle.mainBundle().infoDictionary! as Dictionary
+//        let CFBundleShortVersionString = infoDictionary["CFBundleShortVersionString"]! as! String
+//        versionLabel.text = "Ver.\(CFBundleShortVersionString)"
+    
     }
     
     func titleLogoAnimation() {
         // logo.pngのアニメーション
-        logoImageView.delay = 2.2
+        logoImageView.delay = 2.0
         logoImageView.duration = 1.0
         logoImageView.animation = "fadeInDown"
         logoImageView.animateNext { () -> () in
@@ -63,6 +59,9 @@ class StartViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }
     
     
