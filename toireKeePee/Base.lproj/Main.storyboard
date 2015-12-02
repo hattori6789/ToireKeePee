@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTitle01.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTH-Cc-deO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTH-Cc-deO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
@@ -778,10 +778,10 @@
         <image name="LINE_icon_Green.png" width="256" height="252"/>
         <image name="TwitterLogo_#55acee.png" width="1687" height="1687"/>
         <image name="background.png" width="640" height="1136"/>
-        <image name="backgroundTitle01.png" width="640" height="1136"/>
         <image name="logo.png" width="617" height="321"/>
         <image name="men.png" width="895" height="1742"/>
         <image name="menButton.png" width="197" height="197"/>
+        <image name="titleBackground.png" width="640" height="1136"/>
         <image name="womenButton.png" width="197" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
