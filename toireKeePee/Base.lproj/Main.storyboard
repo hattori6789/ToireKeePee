@@ -657,6 +657,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="retryButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D2H-0U-0vc"/>
                                             <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="DMU-ZJ-AH6"/>
                                         </connections>
                                     </button>
@@ -684,6 +685,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="backButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zYV-zQ-KEv"/>
                                             <segue destination="wWL-cG-ZL5" kind="unwind" unwindAction="unwindToTop:" id="WWX-HT-jxy"/>
                                         </connections>
                                     </button>
@@ -728,7 +730,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="againButton" destination="hX8-NV-RTi" id="7s2-LF-mgH"/>
                         <outlet property="gameOverScoreLabel" destination="eKf-qx-oe3" id="gRH-Pd-RCK"/>
                         <outlet property="gameOverView" destination="8rG-TK-m3C" id="PT3-db-pw4"/>
                         <outlet property="highScoreLabel" destination="WQ9-SM-7Cl" id="pfv-LD-nkr"/>
@@ -739,6 +740,7 @@
                         <outlet property="line" destination="Wae-si-DgX" id="qng-ew-N5N"/>
                         <outlet property="menButton" destination="1vS-DA-avD" id="twa-4t-R4J"/>
                         <outlet property="personImageView" destination="Oc9-Md-HW4" id="fGm-lL-Prw"/>
+                        <outlet property="retryButton" destination="hX8-NV-RTi" id="tlr-tG-Lxq"/>
                         <outlet property="scoreLabel" destination="Xh6-z6-d0K" id="xo3-tB-8qW"/>
                         <outlet property="setUpLabel" destination="cQ9-qK-qzy" id="JLH-fe-4Ky"/>
                         <outlet property="timerLabel" destination="Ued-yM-JEg" id="L7a-o7-JW6"/>
