@@ -9,9 +9,9 @@
 import UIKit
 
 class AboutTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var versionLabel: UILabel!
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,11 +21,11 @@ class AboutTableViewCell: UITableViewCell {
         versionLabel.text = "Ver.\(CFBundleShortVersionString)"
         
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

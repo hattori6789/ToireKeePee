@@ -13,25 +13,25 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // NavigationBarを表示
         self.navigationController?.navigationBarHidden = false
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+    
     // MARK: - UITabaleViewDelegate
- 
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 110
         }
         return 44
-
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -42,7 +42,7 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         let cell = tableView.dequeueReusableCellWithIdentifier("License")
         return cell!
-
+        
     }
     
     // MARK: - UITabaleViewDataSource
@@ -50,5 +50,5 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-
+    
 }
