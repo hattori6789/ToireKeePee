@@ -18,12 +18,12 @@ class LicenseDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         text.text = license
         title = name
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -35,3 +35,4 @@ class LicenseDetailViewController: UIViewController {
     }
     
 }
+

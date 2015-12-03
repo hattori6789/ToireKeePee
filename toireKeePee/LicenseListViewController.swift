@@ -19,7 +19,7 @@ class LicenseListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     private var softwares = [Software]()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

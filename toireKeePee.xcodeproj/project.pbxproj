@@ -62,6 +62,8 @@
 		02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */; };
 		02D2CA831C0AF6ED00E9B082 /* Licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02D2CA821C0AF6ED00E9B082 /* Licenses.plist */; };
 		02DE64D81B94361700BB51C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE64D71B94361700BB51C3 /* StartViewController.swift */; };
+		02ECBC0A1C10A08900AEEC43 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECBC091C10A08900AEEC43 /* LicenseListViewController.swift */; };
+		02ECBC0C1C10A0C400AEEC43 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECBC0B1C10A0C400AEEC43 /* LicenseDetailViewController.swift */; };
 		BB06AF4A1BF1E49F00A7DEE1 /* hue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */; };
 		BB76664B1BF0E65800679E43 /* batsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7666491BF0E65800679E43 /* batsu.mp3 */; };
 		BB76664D1BF0E92F00679E43 /* maru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB76664C1BF0E92F00679E43 /* maru.mp3 */; };
@@ -79,7 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020659531C0B03AA00A9DB8D /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		020A3CF91B8BDEB200263781 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
 		0222B5FA1BD935170054A1A2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		023311E81B966BA4002B46CA /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
@@ -139,8 +140,9 @@
 		02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LINE_icon_Green.png; sourceTree = "<group>"; };
 		02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterLogo_#55acee.png"; sourceTree = "<group>"; };
 		02D2CA821C0AF6ED00E9B082 /* Licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licenses.plist; sourceTree = "<group>"; };
-		02D2CA841C0AF86100E9B082 /* LicenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
 		02DE64D71B94361700BB51C3 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		02ECBC091C10A08900AEEC43 /* LicenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
+		02ECBC0B1C10A0C400AEEC43 /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		BB06AF491BF1E49F00A7DEE1 /* hue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hue.mp3; sourceTree = "<group>"; };
 		BB7666491BF0E65800679E43 /* batsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsu.mp3; sourceTree = "<group>"; };
 		BB76664C1BF0E92F00679E43 /* maru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maru.mp3; sourceTree = "<group>"; };
@@ -208,8 +210,8 @@
 			children = (
 				027A56D11C1092B300E3330C /* AboutViewController.swift */,
 				027A56D31C1094A500E3330C /* AboutTableViewCell.swift */,
-				02D2CA841C0AF86100E9B082 /* LicenseListViewController.swift */,
-				020659531C0B03AA00A9DB8D /* LicenseDetailViewController.swift */,
+				02ECBC091C10A08900AEEC43 /* LicenseListViewController.swift */,
+				02ECBC0B1C10A0C400AEEC43 /* LicenseDetailViewController.swift */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -447,6 +449,7 @@
 				02B283911BD2C037009E67B1 /* RGBExtention.swift in Sources */,
 				0268B4F01B790CE00075252D /* ViewController.swift in Sources */,
 				02474B981C0FADE900FFA25D /* DesignableView.swift in Sources */,
+				02ECBC0C1C10A0C400AEEC43 /* LicenseDetailViewController.swift in Sources */,
 				02474BA91C0FADE900FFA25D /* TransitionZoom.swift in Sources */,
 				02474B911C0FADE900FFA25D /* BlurView.swift in Sources */,
 				0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */,
@@ -459,6 +462,7 @@
 				02474B971C0FADE900FFA25D /* DesignableTextView.swift in Sources */,
 				027A56D21C1092B300E3330C /* AboutViewController.swift in Sources */,
 				02474BA01C0FADE900FFA25D /* Spring.swift in Sources */,
+				02ECBC0A1C10A08900AEEC43 /* LicenseListViewController.swift in Sources */,
 				02474BA21C0FADE900FFA25D /* SpringButton.swift in Sources */,
 				02474BAA1C0FADE900FFA25D /* UnwindSegue.swift in Sources */,
 				02474B941C0FADE900FFA25D /* DesignableLabel.swift in Sources */,
