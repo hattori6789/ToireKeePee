@@ -162,7 +162,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="versionLabel" destination="6C5-sv-a7m" id="2Xe-HF-slZ"/>
+                                            <outlet property="versionLabel" destination="6C5-sv-a7m" id="fE2-d8-ptF"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="License" textLabel="JM8-a6-Tcc" style="IBUITableViewCellStyleDefault" id="n1r-TL-cCc">
