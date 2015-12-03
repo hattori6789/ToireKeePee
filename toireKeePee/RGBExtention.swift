@@ -2,7 +2,7 @@
 //  RGBExtention.swift
 //  toireKeePee
 //
-//  Created by hattori on 2015/09/02.
+//  Created by hattori
 //  Copyright (c) 2015年 hattori. All rights reserved.
 //
 

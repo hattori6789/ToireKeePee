@@ -1,8 +1,8 @@
-//
+ //
 //  ViewController.swift
 //  toireKeePee
 //
-//  Created by hattori on 2015/08/11.
+//  Created by hattori
 //  Copyright (c) 2015年 hattori. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameOverScoreLabel: UILabel!
     @IBOutlet weak var gameOverView: UIView!
-    @IBOutlet weak var againButton: DesignableButton!
+    @IBOutlet weak var retryButton: DesignableButton!
     @IBOutlet weak var menButton: DesignableButton!
     @IBOutlet weak var womenButton: DesignableButton!
     @IBOutlet weak var judgeContainerView: UIView!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     // タイマーの秒数の設定
-    var cnt: Float = 20
+    var cnt: Float = 5
     
     // タイマーの作成
     var timer: NSTimer!
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         // scoreの表示
         scoreLabel.text = "SCORE: 0"
         timerLabel.textAlignment = NSTextAlignment.Left
-        timerLabel.text = "Time: 停止"
+        timerLabel.text = "TIME: READY"
         
         // randomTextの表示
         randomPersonImageView()
@@ -72,7 +72,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // Labelを、、、
         setUpLabel.alpha = 0
-        // setUpLabel.textColor = UIColor.yellowColor()
         
         // タッチイベントの状態確認と、、、
         touchEventCheck()
@@ -91,10 +90,12 @@ class ViewController: UIViewController {
                     self.touchEventCheck()
                     self.setUpLabel.alpha = 0.0
                     self.setUpLabel.text = "どん！！"
+                    
+                    // Timerの表示
+                    self.timerLabel.text = "TIME: \(self.cnt)"
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
+
                 })
-                // Timerの表示
-                self.timerLabel.text = "Time: \(self.cnt)"
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
                 
         })
         
@@ -121,8 +122,9 @@ class ViewController: UIViewController {
         cnt -= 0.1
         
         // 桁数を指定して文字列を作り、timerLabelに表示する
-        let str = "Time: ".stringByAppendingFormat("%.1f",cnt)
+        let str = "TIME: ".stringByAppendingFormat("%.1f",cnt)
         timerLabel.text = str
+        print(str)
         
         // cntが0になった時の処理
         if cnt <= 0 {
@@ -195,10 +197,10 @@ class ViewController: UIViewController {
     func timeUp() {
         
         // timerLabelを0表示する
-        self.timerLabel.text = "Time: 0.0"
+        self.timerLabel.text = "TIME: 0.0"
         
         // タイマー処理の停止
-        timer.invalidate()
+        self.timer.invalidate()
         
         // 終了の笛の音を鳴らす
         soundManager.sePlay("hue.mp3")
@@ -244,10 +246,10 @@ class ViewController: UIViewController {
         let ud = NSUserDefaults.standardUserDefaults()
         let rappedHighScore = ud.objectForKey("udScore") as? Int
         if rappedHighScore == nil {
-            highScoreLabel.text = "ハイスコア: 0"
+            highScoreLabel.text = "HIGH SCORE: 0"
         } else {
             if let highScore = rappedHighScore {
-                highScoreLabel.text = "ハイスコア: \(highScore)"
+                highScoreLabel.text = "HIGH SCORE: \(highScore)"
             }
         }
         
@@ -349,9 +351,14 @@ class ViewController: UIViewController {
     
     func share(type: String) {
         let vc = SLComposeViewController(forServiceType: type)
-        vc.setInitialText("[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:\n")
+        let text = "[駆け込め！トイレ運動会]\nスコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\n"
+        let url = "url.com"
+        vc.setInitialText(text)
+        vc.addURL(NSURL(string: url))
         self.presentViewController(vc, animated: true, completion: nil)
     }
+    
+    
     
     @IBAction func twitterTapped(sender: AnyObject) {
         share(SLServiceTypeTwitter)
@@ -360,11 +367,18 @@ class ViewController: UIViewController {
     @IBAction func lineTapped(sender: AnyObject) {
         let message = "[駆け込め！トイレ運動会]スコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\nURL:XXXXX\n"
         if let encoded = message.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
-            if let uri = NSURL(string: "line://msg/text/" + encoded) {
-                UIApplication.sharedApplication().openURL(uri)
+            if let url = NSURL(string: "line://msg/text/" + encoded) {
+                UIApplication.sharedApplication().openURL(url)
             }
         }
         
     }
     
+    @IBAction func retryButtonTapped(sender: AnyObject) {
+        timer.invalidate()
+        print("よばれたよ")
+    }
+    @IBAction func backButtonTapped(sender: AnyObject) {
+        timer.invalidate()
+    }
 }
