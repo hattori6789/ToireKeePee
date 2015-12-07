@@ -11,7 +11,7 @@ import AVFoundation
 import Social
 
 class ViewController: UIViewController {
-    
+        
     @IBOutlet weak var judgeButton: UIButton!
     @IBOutlet weak var twitter: DesignableButton!
     @IBOutlet weak var line: DesignableButton!
@@ -80,7 +80,6 @@ class ViewController: UIViewController {
         let duration = 1.0
         let delay = 1.0
         
-        
         UIView.animateWithDuration(duration, delay: delay, options: .CurveEaseInOut, animations: { () -> Void in
             self.setUpLabel.alpha = 1
             self.setUpLabel.text = "よーい・・・"
@@ -118,16 +117,24 @@ class ViewController: UIViewController {
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド
     func countDown(timer : NSTimer) {
         
-        // cntを0.1秒ずつ減らす
-        cnt -= 0.1
-        
         // 桁数を指定して文字列を作り、timerLabelに表示する
         let str = "TIME: ".stringByAppendingFormat("%.1f",cnt)
         timerLabel.text = str
         print(str)
         
+        // cntを0.1秒ずつ減らす
+        cnt -= 0.1
+        
         // cntが0になった時の処理
         if cnt <= 0 {
+            
+            // タイマー処理の停止
+            self.timer.invalidate()
+            
+            // timerLabelを0表示する
+            self.timerLabel.text = "TIME: 0.0"
+            
+            // timeUp処理
             timeUp()
         }
         
@@ -195,12 +202,6 @@ class ViewController: UIViewController {
     }
     
     func timeUp() {
-        
-        // timerLabelを0表示する
-        self.timerLabel.text = "TIME: 0.0"
-        
-        // タイマー処理の停止
-        self.timer.invalidate()
         
         // 終了の笛の音を鳴らす
         soundManager.sePlay("hue.mp3")
