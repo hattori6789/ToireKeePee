@@ -170,7 +170,7 @@ class ViewController: UIViewController {
     }
     
     // 不正解時に呼び出される処理
-    func falseAnswer() {
+    func falseAnswer(falseImage: String) {
         
         // タイマー処理の停止
         timer.invalidate()
@@ -208,7 +208,7 @@ class ViewController: UIViewController {
         
         resultHighScore()
         
-        personImageView.image = UIImage(named: "munku.png")
+        personImageView.image = UIImage(named: falseImage)
         
     }
     
@@ -322,7 +322,7 @@ class ViewController: UIViewController {
             addScore()
         } else {
             // 不正解時の処理
-            falseAnswer()
+            falseAnswer("womenFalseAction.png")
         }
         
     }
@@ -349,7 +349,7 @@ class ViewController: UIViewController {
         } else {
             
             // 不正解時の処理
-            falseAnswer()
+            falseAnswer("menFalseAction.png")
         }
     }
     
