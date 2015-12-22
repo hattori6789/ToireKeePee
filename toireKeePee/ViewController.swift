@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     // タイマーの秒数の設定
-    var cnt: Float = 5
+    var cnt: Float = 20
     
     // タイマーの作成
     var timer: NSTimer!
@@ -91,8 +91,12 @@ class ViewController: UIViewController {
                     self.setUpLabel.text = "どん！！"
                     
                     // Timerの表示
-                    self.timerLabel.text = "TIME: \(self.cnt)"
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
+                    if self.timer == nil {
+                        self.timerLabel.text = "TIME: \(self.cnt)"
+                        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
+                    } else {
+                        self.timer.fire()
+                    }
 
                 })
                 
@@ -117,23 +121,19 @@ class ViewController: UIViewController {
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド
     func countDown(timer : NSTimer) {
         
-        // 桁数を指定して文字列を作り、timerLabelに表示する
+        // 桁数を指定して文字列を作り、文字列を作成
         let str = "TIME: ".stringByAppendingFormat("%.1f",cnt)
         timerLabel.text = str
-        print(str)
-        
         // cntを0.1秒ずつ減らす
         cnt -= 0.1
         
         // cntが0になった時の処理
-        if cnt <= 0 {
+        if cnt < 0 {
             
             // タイマー処理の停止
-            self.timer.invalidate()
-            
-            // timerLabelを0表示する
+            timer.invalidate()
+            // timerLabelの表示を"TIME: 0.0"にする
             self.timerLabel.text = "TIME: 0.0"
-            
             // timeUp処理
             timeUp()
         }
@@ -156,6 +156,17 @@ class ViewController: UIViewController {
         
         // maruサウンドを鳴らす
         soundManager.sePlay("maru.mp3")
+        
+        // 一定時間後に
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.15 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            // imageValueをランダムに更新する処理
+            self.randomPersonImageView()
+            // judgeContainerViewを非表示にする
+            self.judgeContainerView.hidden = true
+            
+        }
+        
     }
     
     // 不正解時に呼び出される処理
@@ -342,14 +353,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func judgeButtonTapped(sender: AnyObject) {
-        // judgeContainerViewを非表示にする
-        judgeContainerView.hidden = true
-        
-        // imageValueをランダムに更新する処理
-        randomPersonImageView()
-    }
-    
     func share(type: String) {
         let vc = SLComposeViewController(forServiceType: type)
         let text = "[駆け込め！トイレ運動会]\nスコア：\(score)点\nぎゃるとおっさんがトイレに駆け込むシンプルゲーム！\n"
@@ -377,7 +380,6 @@ class ViewController: UIViewController {
     
     @IBAction func retryButtonTapped(sender: AnyObject) {
         timer.invalidate()
-        print("よばれたよ")
     }
     @IBAction func backButtonTapped(sender: AnyObject) {
         timer.invalidate()
