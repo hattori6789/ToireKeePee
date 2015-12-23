@@ -15,6 +15,7 @@ class SoundManager: NSObject {
         let url = NSURL.fileURLWithPath(bndlPath).URLByAppendingPathComponent(soundName)
          // playerに読み込んだmp3ファイルへのパスを設定する
         player = try! AVAudioPlayer(contentsOfURL: url, fileTypeHint: nil)
+        player?.volume = 0.5
         player?.prepareToPlay()
         player?.play()
     }
@@ -32,6 +33,7 @@ class SoundManager: NSObject {
         // playerに読み込んだmp3ファイルへのパスを設定する
         player = try! AVAudioPlayer(contentsOfURL: url, fileTypeHint: nil)
         player?.numberOfLoops = -1
+        player?.volume = 0.5
         player?.prepareToPlay()
         player?.play()
     }
