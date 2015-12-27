@@ -41,8 +41,6 @@
 		02474BA81C0FADE900FFA25D /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02474B8B1C0FADE900FFA25D /* TransitionManager.swift */; };
 		02474BA91C0FADE900FFA25D /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02474B8C1C0FADE900FFA25D /* TransitionZoom.swift */; };
 		02474BAA1C0FADE900FFA25D /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02474B8D1C0FADE900FFA25D /* UnwindSegue.swift */; };
-		02521A271C29727C00C39B90 /* menFalseAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 02521A251C29727C00C39B90 /* menFalseAction.png */; };
-		02521A281C29727C00C39B90 /* womenFalseAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 02521A261C29727C00C39B90 /* womenFalseAction.png */; };
 		0268B4EE1B790CE00075252D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4ED1B790CE00075252D /* AppDelegate.swift */; };
 		0268B4F01B790CE00075252D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268B4EF1B790CE00075252D /* ViewController.swift */; };
 		0268B4F31B790CE00075252D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0268B4F11B790CE00075252D /* Main.storyboard */; };
@@ -60,6 +58,8 @@
 		02A5D0061BD4090D00F16453 /* womenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A5D0041BD4090D00F16453 /* womenButton.png */; };
 		02A633EC1BAB1A1200295BFD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A633EB1BAB1A1200295BFD /* Social.framework */; };
 		02B283911BD2C037009E67B1 /* RGBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B283901BD2C037009E67B1 /* RGBExtention.swift */; };
+		02BD19BD1C2FE918000707CD /* womenFalseAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD19BB1C2FE918000707CD /* womenFalseAction.png */; };
+		02BD19BE1C2FE918000707CD /* menFalseAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD19BC1C2FE918000707CD /* menFalseAction.png */; };
 		02BEEABE1BE03C4C00E6E3D7 /* LINE_icon_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */; };
 		02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */; };
 		02D2CA831C0AF6ED00E9B082 /* Licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02D2CA821C0AF6ED00E9B082 /* Licenses.plist */; };
@@ -118,8 +118,6 @@
 		02474B8B1C0FADE900FFA25D /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		02474B8C1C0FADE900FFA25D /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		02474B8D1C0FADE900FFA25D /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
-		02521A251C29727C00C39B90 /* menFalseAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menFalseAction.png; sourceTree = "<group>"; };
-		02521A261C29727C00C39B90 /* womenFalseAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womenFalseAction.png; sourceTree = "<group>"; };
 		0268B4E81B790CE00075252D /* toireKeePee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toireKeePee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0268B4EC1B790CE00075252D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0268B4ED1B790CE00075252D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +139,8 @@
 		02A5D0041BD4090D00F16453 /* womenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womenButton.png; sourceTree = "<group>"; };
 		02A633EB1BAB1A1200295BFD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		02B283901BD2C037009E67B1 /* RGBExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBExtention.swift; sourceTree = "<group>"; };
+		02BD19BB1C2FE918000707CD /* womenFalseAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womenFalseAction.png; sourceTree = "<group>"; };
+		02BD19BC1C2FE918000707CD /* menFalseAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menFalseAction.png; sourceTree = "<group>"; };
 		02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LINE_icon_Green.png; sourceTree = "<group>"; };
 		02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterLogo_#55acee.png"; sourceTree = "<group>"; };
 		02D2CA821C0AF6ED00E9B082 /* Licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licenses.plist; sourceTree = "<group>"; };
@@ -290,8 +290,8 @@
 			children = (
 				02BEEABD1BE03C4C00E6E3D7 /* LINE_icon_Green.png */,
 				BB97A0561BEA0BE800FB2E4D /* titleBackground.png */,
-				02521A251C29727C00C39B90 /* menFalseAction.png */,
-				02521A261C29727C00C39B90 /* womenFalseAction.png */,
+				02BD19BB1C2FE918000707CD /* womenFalseAction.png */,
+				02BD19BC1C2FE918000707CD /* menFalseAction.png */,
 				02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */,
 				02A5D0031BD4090D00F16453 /* menButton.png */,
 				0222B5FA1BD935170054A1A2 /* background.png */,
@@ -414,16 +414,16 @@
 				BB97A0571BEA0BE800FB2E4D /* titleBackground.png in Resources */,
 				0245FCDF1BD5C3FF00B6844C /* backgroundTitleORG.png in Resources */,
 				026ADB4A1BA037450051BE8F /* women.png in Resources */,
-				02521A271C29727C00C39B90 /* menFalseAction.png in Resources */,
-				02521A281C29727C00C39B90 /* womenFalseAction.png in Resources */,
 				0245FCE11BD5C44D00B6844C /* logo.png in Resources */,
 				028C77CE1BE04A3200DBDEE9 /* batsu.png in Resources */,
 				BB06AF4A1BF1E49F00A7DEE1 /* hue.mp3 in Resources */,
 				0268B4F81B790CE00075252D /* LaunchScreen.xib in Resources */,
+				02BD19BE1C2FE918000707CD /* menFalseAction.png in Resources */,
 				0268B4F51B790CE00075252D /* Images.xcassets in Resources */,
 				02A5D0061BD4090D00F16453 /* womenButton.png in Resources */,
 				BB76664B1BF0E65800679E43 /* batsu.mp3 in Resources */,
 				02A2E4AF1B95D20A0060BE32 /* men.png in Resources */,
+				02BD19BD1C2FE918000707CD /* womenFalseAction.png in Resources */,
 				02A5D0051BD4090D00F16453 /* menButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
