@@ -1,3 +1,10 @@
+//
+//  ViewController.swift
+//  toireKeePee
+//
+//  Created by hattori
+//  Copyright (c) 2015年 hattori. All rights reserved.
+//
 
 import Foundation
 import AVFoundation
