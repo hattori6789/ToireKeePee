@@ -1,4 +1,4 @@
- //
+//
 //  ViewController.swift
 //  toireKeePee
 //
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
                     // Timerの表示
                     if self.timer == nil {
                         self.timerLabel.text = "TIME: \(self.cnt)"
-                        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "countDown:", userInfo: nil, repeats: true)
+                        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.countDown(_:)), userInfo: nil, repeats: true)
                     } else {
                         self.timer.fire()
                     }
