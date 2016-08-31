@@ -205,7 +205,6 @@ class ViewController: UIViewController {
 
         })
 
-        
         // judgeImageViewにbatsu.pngを表示する
         let judgeImage = UIImage(named: "batsu.png")
 
@@ -247,8 +246,6 @@ class ViewController: UIViewController {
         resultHighScore()
     
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -370,8 +367,6 @@ class ViewController: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func twitterTapped(sender: AnyObject) {
         share(SLServiceTypeTwitter)
     }
@@ -389,6 +384,7 @@ class ViewController: UIViewController {
     @IBAction func retryButtonTapped(sender: AnyObject) {
         timer.invalidate()
     }
+    
     @IBAction func backButtonTapped(sender: AnyObject) {
         timer.invalidate()
     }
