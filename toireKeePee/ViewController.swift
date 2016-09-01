@@ -160,10 +160,10 @@ class ViewController: UIViewController {
         // maruサウンドを鳴らす
         soundManager.sePlay("maru.mp3")
         
-        // 一定時間とめる
-        let time = 0.2 * Double(NSEC_PER_SEC)
-        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time))
-        dispatch_after(delay, dispatch_get_main_queue()) {
+        // 一定時間止める
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
             // imageValueをランダムに更新する処理
             self.randomPersonImageView()
             // judgeContainerViewを非表示にする
