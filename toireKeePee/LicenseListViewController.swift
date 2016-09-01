@@ -12,7 +12,7 @@ import UIKit
 class LicenseListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+     
     private struct Software {
         var name: String
         var license: String
