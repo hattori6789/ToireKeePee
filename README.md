@@ -1,10 +1,10 @@
 ## About App
-* 不正解の顔がシュール、30秒で遊べるワンタップゲームアプリ
+不正解の顔がシュール、30秒で遊べるワンタップゲームアプリ
 
 ## Special Thanks
 
 ### Thanks awesome images!!
-* [@hagikan](https://twitter.com/hagikan)
+[@hagikan](https://twitter.com/hagikan)
 
 ### Thanks awesome sounds!!
 * [DOVA-SYNDROME](http://dova-s.jp)
