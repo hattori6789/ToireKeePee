@@ -475,11 +475,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hs9-Bj-ef5" userLabel="JudgeContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-5Q-f1u" userLabel="JudgeImageView">
-                                        <rect key="frame" x="63" y="209" width="250" height="250"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-5Q-f1u" userLabel="JudgeImageView">
+                                        <rect key="frame" x="38" y="184" width="300" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="4PI-KB-TZv"/>
-                                            <constraint firstAttribute="width" constant="250" id="ngX-sX-AeZ"/>
+                                            <constraint firstAttribute="width" constant="300" id="UdI-cW-93S"/>
+                                            <constraint firstAttribute="height" constant="300" id="jFN-m5-XeA"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anq-YB-h8x" userLabel="JudgeButton">
