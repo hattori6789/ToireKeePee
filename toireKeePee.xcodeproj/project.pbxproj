@@ -246,7 +246,6 @@
 		0268B4EA1B790CE00075252D /* toireKeePee */ = {
 			isa = PBXGroup;
 			children = (
-				02172EBD1D78304A00501CEE /* Spring */,
 				0266277E1C0CBE05008F6EF0 /* About */,
 				0268B4ED1B790CE00075252D /* AppDelegate.swift */,
 				02B283901BD2C037009E67B1 /* RGBExtention.swift */,
@@ -255,9 +254,10 @@
 				02DE64D71B94361700BB51C3 /* StartViewController.swift */,
 				0268B4F11B790CE00075252D /* Main.storyboard */,
 				0268B4F41B790CE00075252D /* Images.xcassets */,
-				0268B50F1B790DE30075252D /* Image */,
-				0279A24D1B79ED1B00CF916A /* Sound */,
 				0268B4F61B790CE00075252D /* LaunchScreen.xib */,
+				0279A24D1B79ED1B00CF916A /* Sound */,
+				0268B50F1B790DE30075252D /* Image */,
+				02172EBD1D78304A00501CEE /* Spring */,
 				0268B4EB1B790CE00075252D /* Supporting Files */,
 			);
 			path = toireKeePee;
