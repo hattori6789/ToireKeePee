@@ -143,16 +143,19 @@ class ViewController: UIViewController {
     
     
     // 正解時に呼び出される処理
-    func trueAnswer() {
+    func trueAnswer(trueImage: String) {
         
         // judgiContainerViewを表示
         judgeContainerView.hidden = false
         
         // judgeImageViewにmaru.pngを表示する
         let judgeImage = UIImage(named: "maru.png")
-        
+
         // judgeImageViewを代入
         judgeImageView.image = judgeImage
+        
+        //
+        personImageView.image = UIImage(named: trueImage)
         
         // maruサウンドを鳴らす
         soundManager.sePlay("maru.mp3")
@@ -322,7 +325,7 @@ class ViewController: UIViewController {
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "おっさん" {
             sender.animate()
-            trueAnswer()
+            trueAnswer("menTrueAction.png")
             // Scoreを更新
             addScore()
         } else {
@@ -348,7 +351,7 @@ class ViewController: UIViewController {
         // imageValueが、属性ラベルと一致していたら
         if imageValueLabel.text == "ぎゃる" {
             sender.animate()
-            trueAnswer()
+            trueAnswer("womenTrueAction.png")
             // Scoreを更新
             addScore()
         } else {

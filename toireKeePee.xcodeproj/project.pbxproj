@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		020A3CFA1B8BDEB200263781 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020A3CF91B8BDEB200263781 /* BGM.mp3 */; };
+		0212291D1D77C7AC005D0CFA /* menTrueAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 0212291B1D77C7AC005D0CFA /* menTrueAction.png */; };
+		0212291E1D77C7AC005D0CFA /* womenTrueAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 0212291C1D77C7AC005D0CFA /* womenTrueAction.png */; };
 		0222B5FB1BD935170054A1A2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0222B5FA1BD935170054A1A2 /* background.png */; };
 		023311E91B966BA4002B46CA /* munku.png in Resources */ = {isa = PBXBuildFile; fileRef = 023311E81B966BA4002B46CA /* munku.png */; };
 		0245FCDF1BD5C3FF00B6844C /* backgroundTitleORG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */; };
@@ -84,6 +86,8 @@
 
 /* Begin PBXFileReference section */
 		020A3CF91B8BDEB200263781 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
+		0212291B1D77C7AC005D0CFA /* menTrueAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menTrueAction.png; sourceTree = "<group>"; };
+		0212291C1D77C7AC005D0CFA /* womenTrueAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womenTrueAction.png; sourceTree = "<group>"; };
 		0222B5FA1BD935170054A1A2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		023311E81B966BA4002B46CA /* munku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munku.png; sourceTree = "<group>"; };
 		0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundTitleORG.png; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				02BD19BB1C2FE918000707CD /* womenFalseAction.png */,
 				02BD19BC1C2FE918000707CD /* menFalseAction.png */,
 				02BEEABF1BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png */,
+				0212291B1D77C7AC005D0CFA /* menTrueAction.png */,
+				0212291C1D77C7AC005D0CFA /* womenTrueAction.png */,
 				02A5D0031BD4090D00F16453 /* menButton.png */,
 				0222B5FA1BD935170054A1A2 /* background.png */,
 				0245FCDE1BD5C3FF00B6844C /* backgroundTitleORG.png */,
@@ -408,9 +414,11 @@
 				BB76664D1BF0E92F00679E43 /* maru.mp3 in Resources */,
 				02BEEABE1BE03C4C00E6E3D7 /* LINE_icon_Green.png in Resources */,
 				0268B51B1B790DF10075252D /* maru.png in Resources */,
+				0212291D1D77C7AC005D0CFA /* menTrueAction.png in Resources */,
 				02474B9D1C0FADE900FFA25D /* LoadingView.xib in Resources */,
 				02474B9A1C0FADE900FFA25D /* Info.plist in Resources */,
 				02BEEAC01BE03C5D00E6E3D7 /* TwitterLogo_#55acee.png in Resources */,
+				0212291E1D77C7AC005D0CFA /* womenTrueAction.png in Resources */,
 				BB97A0571BEA0BE800FB2E4D /* titleBackground.png in Resources */,
 				0245FCDF1BD5C3FF00B6844C /* backgroundTitleORG.png in Resources */,
 				026ADB4A1BA037450051BE8F /* women.png in Resources */,
